@@ -1,0 +1,32 @@
+# Tracy Anne Griffin Manning
+
+> AI Platform Architect focused on governed agentic systems, enterprise AI, cloud infrastructure, and evidence-driven architecture.
+
+Tracy Manning designs production AI systems where model capability, human authority, infrastructure, and business risk meet.
+
+## Portfolio
+
+- [GitHub](https://github.com/TAM-DS): Selected engineering systems and architecture work
+- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): Governed deployment and runtime authority for autonomous agents
+- [Monster Heavy](https://github.com/TAM-DS/monster-heavy): Governed AI trust boundaries
+- [Monster Desk](https://github.com/TAM-DS/monster-desk): Human-authorized trading architecture
+- [Aegis Evidence](https://github.com/TAM-DS/aegis-evidence): AI governance and evidence architecture
+- [Ballast](https://github.com/TAM-DS/ballast): Supply-chain risk and scenario planning
+
+## Writing & Visual Intelligence
+
+- [Cyber Essentials](https://cyberessentialsdotblog.wordpress.com/): Writing on AI, cybersecurity, risk, and technology
+- [Tableau Public](https://public.tableau.com/app/profile/tagm/vizzes): Analytical dashboards and decision intelligence
+
+## Professional Focus
+
+- Senior and Principal AI Architecture
+- Enterprise AI
+- AI Platforms
+- Cloud / AI Architecture
+- AI Transformation Consulting
+- Technical Chief of Staff
+
+## Geography
+
+Texas Triangle. In-office or hybrid. Open to meaningful travel.
