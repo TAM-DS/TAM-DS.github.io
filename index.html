@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tracy Anne Griffin Manning — AI Platform Architect</title>
+  <meta name="description" content="AI Platform Architect focused on governed agentic systems, enterprise AI, cloud infrastructure, and evidence-driven architecture." />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="canonical" href="https://tam-ds.github.io/" />
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM context" />
+
+  <meta property="og:title" content="Tracy Anne Griffin Manning — AI Platform Architect" />
+  <meta property="og:description" content="Senior. Technical. Strategic. Evidence-driven." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tam-ds.github.io/" />
+
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #111827;
+      --panel-soft: #161b22;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --line: #21262d;
+      --accent: #39ff88;
+      --accent-soft: rgba(57,255,136,.12);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(57,255,136,.06), transparent 28%),
+        linear-gradient(180deg, #0d1117 0%, #0b0f14 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover { color: var(--accent); }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 0;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+
+    .navlinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .hero {
+      padding: 110px 0 84px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 20px rgba(57,255,136,.65);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(46px, 8vw, 88px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      max-width: 960px;
+    }
+
+    .role {
+      margin: 28px 0 0;
+      font-size: clamp(20px, 3vw, 30px);
+      color: #c9d1d9;
+      font-weight: 600;
+    }
+
+    .lede {
+      margin: 26px 0 0;
+      max-width: 830px;
+      font-size: clamp(18px, 2.2vw, 22px);
+      color: var(--muted);
+    }
+
+    .principles {
+      margin-top: 26px;
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+      font-weight: 650;
+      transition: transform .16s ease, border-color .16s ease, color .16s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+    }
+
+    .btn.primary {
+      color: #07130c;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn.primary:hover {
+      color: #07130c;
+      filter: brightness(1.05);
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .section-num {
+      color: var(--accent);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+      padding-top: 8px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -.025em;
+    }
+
+    .section-copy {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 17px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(22,27,34,.95), rgba(17,24,39,.88));
+      min-height: 220px;
+      transition: transform .16s ease, border-color .16s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(57,255,136,.7);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -.015em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .quote {
+      margin: 24px 0 0;
+      padding: 18px 20px;
+      border-left: 2px solid var(--accent);
+      background: var(--accent-soft);
+      color: #d8ffe7;
+      border-radius: 0 12px 12px 0;
+      font-weight: 650;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .fact {
+      padding: 22px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--panel-soft);
+    }
+
+    .fact strong {
+      display: block;
+      color: var(--accent);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      margin-bottom: 8px;
+    }
+
+    .fact span {
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .link-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--panel-soft);
+    }
+
+    .link-card small {
+      display: block;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .link-card strong {
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 44px 0 70px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .hero { padding: 78px 0 60px; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+      .grid, .facts, .links { grid-template-columns: 1fr; }
+      .navlinks { gap: 12px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tracy Anne Griffin Manning",
+    "url": "https://tam-ds.github.io/",
+    "email": "mailto:tmanning@post.harvard.edu",
+    "sameAs": [
+      "https://github.com/TAM-DS",
+      "https://www.linkedin.com/in/tracymanning",
+      "https://x.com/TAGM2025",
+      "https://public.tableau.com/app/profile/tagm/vizzes",
+      "https://cyberessentialsdotblog.wordpress.com/"
+    ],
+    "jobTitle": "AI Platform Architect",
+    "knowsAbout": [
+      "Enterprise AI",
+      "Agentic AI",
+      "AI Platforms",
+      "Cloud Architecture",
+      "AI Governance",
+      "AWS",
+      "GCP",
+      "Linux",
+      "Python",
+      "SQL",
+      "Terraform",
+      "Kubernetes"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="wrap">
+    <nav aria-label="Primary">
+      <a class="brand" href="/">TAGM</a>
+      <div class="navlinks">
+        <a href="#systems">Systems</a>
+        <a href="#thinking">Thinking</a>
+        <a href="#work">Open to</a>
+        <a href="https://github.com/TAM-DS" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="eyebrow"><span class="dot"></span> Texas Triangle · In-office or hybrid</div>
+      <h1>Tracy Anne Griffin Manning</h1>
+      <p class="role">AI Platform Architect · Enterprise AI · Systems Architecture</p>
+      <p class="lede">
+        I design production AI systems where model capability, human authority, infrastructure, and business risk meet.
+        My work focuses on governed agentic systems, AI-ready data platforms, cloud infrastructure, and architectures
+        that make decisions observable, verifiable, and operationally safe.
+      </p>
+      <p class="principles">Clarity over cleverness. Correctness over speed. Evidence over hype.</p>
+
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/TAM-DS" target="_blank" rel="noreferrer">View GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:tmanning@post.harvard.edu">Email</a>
+      </div>
+    </div>
+
+    <section id="systems">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-num">01</div>
+          <div>
+            <h2>Featured systems</h2>
+            <p class="section-copy">Built around real operating constraints: authority, evidence, failure paths, infrastructure, and business consequence.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <a class="card" href="https://github.com/TAM-DS/monster-heavy" target="_blank" rel="noreferrer">
+            <h3>monster-heavy</h3>
+            <p>A governed AI trust boundary for systems where agents may recommend actions but cannot independently authorize high-risk execution.</p>
+            <span class="tag">Trust boundaries →</span>
+          </a>
+
+          <a class="card" href="https://github.com/TAM-DS/monster-desk" target="_blank" rel="noreferrer">
+            <h3>monster-desk</h3>
+            <p>The research seat can propose a trade. It cannot send one. AI proposes, humans authorize, and the system verifies current evidence before execution.</p>
+            <span class="tag">Human authority →</span>
+          </a>
+
+          <a class="card" href="https://github.com/TAM-DS/aegis-evidence" target="_blank" rel="noreferrer">
+            <h3>aegis-evidence</h3>
+            <p>A SOC evidence architecture mapped to the NIST AI RMF so agent actions remain traceable, reviewable, and governable.</p>
+            <span class="tag">Evidence architecture →</span>
+          </a>
+
+          <a class="card" href="https://github.com/TAM-DS/ballast" target="_blank" rel="noreferrer">
+            <h3>ballast</h3>
+            <p>A supply-chain risk and scenario-planning platform built for operational decision support under uncertainty.</p>
+            <span class="tag">Decision support →</span>
+          </a>
+
+          <a class="card" href="https://github.com/TAM-DS/agent-foundry" target="_blank" rel="noreferrer">
+            <h3>agent-foundry</h3>
+            <p>A governed deployment and runtime authority system for autonomous agents. Capability is not authority. Every consequential transition must earn its own evidence.</p>
+            <span class="tag">Governed autonomy →</span>
+          </a>
+
+          <a class="card" href="https://github.com/TAM-DS/enterprise-AI-workstation" target="_blank" rel="noreferrer">
+            <h3>enterprise-AI-workstation</h3>
+            <p>A workstation is infrastructure. This project treats the AI engineering environment as a governed, reproducible operational system.</p>
+            <span class="tag">Engineering infrastructure →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="thinking">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-num">02</div>
+          <div>
+            <h2>How I think</h2>
+            <p class="section-copy">Technical capability matters. Judgment matters more.</p>
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><strong>Question 01</strong><span>What problem are we actually solving?</span></div>
+          <div class="fact"><strong>Question 02</strong><span>What authority should the AI have?</span></div>
+          <div class="fact"><strong>Question 03</strong><span>What evidence must be true before action?</span></div>
+          <div class="fact"><strong>Question 04</strong><span>What happens when the model is wrong?</span></div>
+          <div class="fact"><strong>Question 05</strong><span>How will we observe, verify, and recover?</span></div>
+          <div class="fact"><strong>Question 06</strong><span>What business consequence does the architecture create?</span></div>
+        </div>
+
+        <div class="quote">
+          AI transformation is not only a technology problem. It changes workflows, decisions, accountability, and operating models.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-num">03</div>
+          <div>
+            <h2>Writing & visual intelligence</h2>
+            <p class="section-copy">I write about AI, cybersecurity, risk, and technology—and build analytical dashboards that turn complex systems into decision-ready information.</p>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="link-card" href="https://cyberessentialsdotblog.wordpress.com/" target="_blank" rel="noreferrer">
+            <small>Writing</small>
+            <strong>Cyber Essentials</strong>
+          </a>
+
+          <a class="link-card" href="https://public.tableau.com/app/profile/tagm/viz/RAGAttackSurface2025-2026/Dashboard2" target="_blank" rel="noreferrer">
+            <small>Selected Tableau</small>
+            <strong>RAG Attack Surface</strong>
+          </a>
+
+          <a class="link-card" href="https://public.tableau.com/app/profile/tagm/vizzes" target="_blank" rel="noreferrer">
+            <small>Portfolio</small>
+            <strong>Explore Tableau Public</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-num">04</div>
+          <div>
+            <h2>Open to</h2>
+            <p class="section-copy">Senior and Principal roles where technical depth, architecture judgment, and business consequence matter.</p>
+          </div>
+        </div>
+
+        <div class="facts">
+          <div class="fact">
+            <strong>Roles</strong>
+            <span>AI Architecture · Enterprise AI · AI Platforms · Cloud / AI Architecture · AI Transformation Consulting · Technical Chief of Staff</span>
+          </div>
+          <div class="fact">
+            <strong>Geographic focus</strong>
+            <span>Texas Triangle</span>
+          </div>
+          <div class="fact">
+            <strong>Work style</strong>
+            <span>In-office or hybrid</span>
+          </div>
+          <div class="fact">
+            <strong>Domain interest</strong>
+            <span>Professional services · energy and commodities · trading · data center infrastructure · supply chain</span>
+          </div>
+        </div>
+
+        <div class="quote">
+          Open to meaningful travel.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-num">05</div>
+          <div>
+            <h2>Senior. Technical. Strategic. Evidence-driven.</h2>
+            <p class="section-copy">Close enough to the work to build and reason. Senior enough to shape the direction.</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="mailto:tmanning@post.harvard.edu">Start a conversation</a>
+          <a class="btn" href="https://github.com/TAM-DS" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="/llms.txt">llms.txt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>Tracy Anne Griffin Manning · September 2026</span>
+      <span>Built with intention.</span>
+    </div>
+  </footer>
+</body>
+</html>
