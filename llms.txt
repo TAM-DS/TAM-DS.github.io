@@ -1,17 +1,33 @@
 # Tracy Anne Griffin Manning
 
-> AI Platform Architect focused on governed agentic systems, enterprise AI, cloud infrastructure, and evidence-driven architecture.
+> AI Platform Architect focused on governed AI agents on AWS, enterprise AI, cloud infrastructure, and evidence-driven architecture.
 
 Tracy Manning designs production AI systems where model capability, human authority, infrastructure, and business risk meet.
+
+## Featured System
+
+- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): Governed AI agents on AWS — a production-oriented governance system built in Python and validated against real AWS infrastructure. The project separates capability, identity, and authority using deterministic controls, AWS IAM, GitHub OIDC, Amazon S3, Terraform, and explicit runtime/tool authorization.
 
 ## Portfolio
 
 - [GitHub](https://github.com/TAM-DS): Selected engineering systems and architecture work
-- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): Governed deployment and runtime authority for autonomous agents
 - [Monster Heavy](https://github.com/TAM-DS/monster-heavy): Governed AI trust boundaries
 - [Monster Desk](https://github.com/TAM-DS/monster-desk): Human-authorized trading architecture
 - [Aegis Evidence](https://github.com/TAM-DS/aegis-evidence): AI governance and evidence architecture
 - [Ballast](https://github.com/TAM-DS/ballast): Supply-chain risk and scenario planning
+
+## Core Technical Themes
+
+- Python
+- AWS
+- Governed agentic systems
+- IAM and bounded authority
+- GitHub OIDC federation
+- Terraform
+- Amazon S3
+- Evidence-driven architecture
+- Runtime and tool authorization
+- Enterprise AI operating controls
 
 ## Writing & Visual Intelligence
 
