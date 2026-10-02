@@ -1,6 +1,6 @@
 # Tracy Anne Griffin Manning
 
-> AI Platform Architect focused on governed AI agents on AWS, enterprise AI, cloud infrastructure, and evidence-driven architecture.
+> Principal AI Architect focused on governed AI agents on AWS, enterprise AI, cloud infrastructure, and evidence-driven architecture.
 
 Tracy Manning designs production AI systems where model capability, human authority, infrastructure, and business risk meet.
 
