@@ -31,6 +31,7 @@ Tracy Manning designs production AI systems where model capability, human author
 
 ## Writing & Visual Intelligence
 
+- [The Cognitive Convergence — Where Capital Learns to Think](https://public.tableau.com/app/profile/tagm/viz/DataDrop18WhereCapitalLearnsToThink/DataDrop18): A forward-looking Tableau model of the shift from capital funding intelligence to capital being allocated through intelligence, mapping the convergence of AI capability, infrastructure, energy, and orbital systems.
 - [Cyber Essentials](https://cyberessentialsdotblog.wordpress.com/): Writing on AI, cybersecurity, risk, and technology
 - [Tableau Public](https://public.tableau.com/app/profile/tagm/vizzes): Analytical dashboards and decision intelligence
 
