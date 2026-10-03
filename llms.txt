@@ -1,49 +1,48 @@
 # Tracy Anne Griffin Manning
 
-> Principal AI Architect focused on governed AI agents on AWS, enterprise AI, cloud infrastructure, and evidence-driven architecture.
+> AI Architect in Austin, Texas, focused on governed agentic AI, enterprise cloud architecture, and inspectable decision evidence.
 
-Tracy Manning designs production AI systems where model capability, human authority, infrastructure, and business risk meet.
+## Identity and professional focus
 
-## Featured System
+- Name: Tracy Anne Griffin Manning; professional short name: Tracy Manning.
+- Current practice: Founder & AI Architect, Apex AI|ML Engineering LLC.
+- Focus: AI architecture, Cloud / AI architecture, enterprise AI platforms, and AI transformation consulting.
+- Technical foundation: Python, AWS, GCP, SQL, Terraform, IAM, GitHub OIDC, Docker, CI/CD, and governed agentic systems.
+- Location: Austin, Texas. Willing to relocate within Texas. Open to meaningful business travel; in-office or hybrid.
+- Email: tmanning@post.harvard.edu.
 
-- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): Governed AI agents on AWS — a production-oriented governance system built in Python and validated against real AWS infrastructure. The project separates capability, identity, and authority using deterministic controls, AWS IAM, GitHub OIDC, Amazon S3, Terraform, and explicit runtime/tool authorization.
+## Site pages
 
-## Portfolio
+- [Perspective](https://tam-ds.github.io/): Professional positioning and selected evidence.
+- [Evidence explorer](https://tam-ds.github.io/evidence.html): Six selected systems explored by business problem or capability.
+- [Architecture and governance](https://tam-ds.github.io/approach.html): Decision authority, current evidence, execution controls, recovery, and availability.
 
-- [GitHub](https://github.com/TAM-DS): Selected engineering systems and architecture work
-- [Monster Heavy](https://github.com/TAM-DS/monster-heavy): Governed AI trust boundaries
-- [Monster Desk](https://github.com/TAM-DS/monster-desk): Human-authorized trading architecture
-- [Aegis Evidence](https://github.com/TAM-DS/aegis-evidence): AI governance and evidence architecture
-- [Ballast](https://github.com/TAM-DS/ballast): Supply-chain risk and scenario planning
+## Selected engineering evidence
 
-## Core Technical Themes
+- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): Production-oriented Python governance system separating capability, identity, deployment, runtime grants, and tool authority. The documented live AWS DEV workflow passed 399 tests and verified artifacts through S3 read-back. TEST and PROD identities remain permissionless. Approver authentication is external to v1.
+- [AWS DEV proof](https://github.com/TAM-DS/agent-foundry/actions/runs/35525913401): Recorded workflow evidence for Agent Foundry; this is a historical verification record, not a claim about current hosted infrastructure.
+- [Monster Heavy](https://github.com/TAM-DS/monster-heavy): PostgreSQL-backed governed paper-execution reference with current-policy checks, fresh evidence, concurrency, worker-death recovery, replay, and compensation. No broker integration or real-money path. Production identity is outside v1 scope.
+- [Monster Desk](https://github.com/TAM-DS/monster-desk): Standalone Streamlit paper console demonstrating Research, Risk, Execution, and Surveillance roles. Ticket binding, mutation rejection, halt, and duplicate safeguards are session-scoped. It does not call Monster Heavy's runtime; its roles are not authenticated production accounts.
+- [AEGIS Evidence](https://github.com/TAM-DS/aegis-evidence): Reproducible assurance workpaper with indicative NIST AI RMF, ISO 42001, and EU AI Act reference mappings; human acceptance, open control gaps, deterministic ZIP, decision-state digest, and complete-archive SHA-256. This is not certification or a legal compliance determination.
+- [BALLAST](https://github.com/TAM-DS/ballast): Synthetic supply-chain scenario prototype using deterministic scoring and a disruptive-action approval gate. Results are simulated; no bookings or contracts change. Approval is a demonstration Boolean, not independently verified identity.
+- [AI-Ready Data Platform](https://github.com/TAM-DS/ai-ready-data-platform): Governed business claims and bounded parallel specialists using the OpenAI Agents SDK, scoped synthetic warehouse facts, deterministic reconciliation, and replayable decisions. Thirty-five tests passed. One clean live M5 run used three concurrent specialists and returned READY_FOR_REVIEW; local saved-artifact replay reported four accepted claims and no blocked claims or conflicts. The committed live record is user-provided terminal evidence; the complete live artifact remains on the workstation. No spending authority, production reliability, or live-model speedup is claimed.
 
-- Python
-- AWS
-- Governed agentic systems
-- IAM and bounded authority
-- GitHub OIDC federation
-- Terraform
-- Amazon S3
-- Evidence-driven architecture
-- Runtime and tool authorization
-- Enterprise AI operating controls
+## Architecture principles
 
-## Writing & Visual Intelligence
+- Capability is not authority. AI proposes; humans authorize; deterministic controls verify current evidence and policy before execution.
+- Approval must bind to exact terms and artifacts.
+- Evidence precedes state. An attempt is not a verified outcome.
+- Preserve failed attempts and decision history. Compensation is a new governed action.
+- Connect the pain point, architecture decision, trade-off, failure risk, control, evidence, and business consequence.
 
-- [The Cognitive Convergence — Where Capital Learns to Think](https://public.tableau.com/app/profile/tagm/viz/DataDrop18WhereCapitalLearnsToThink/DataDrop18): A forward-looking Tableau model of the shift from capital funding intelligence to capital being allocated through intelligence, mapping the convergence of AI capability, infrastructure, energy, and orbital systems.
-- [Cyber Essentials](https://cyberessentialsdotblog.wordpress.com/): Writing on AI, cybersecurity, risk, and technology
-- [Tableau Public](https://public.tableau.com/app/profile/tagm/vizzes): Analytical dashboards and decision intelligence
+## Professional profiles
 
-## Professional Focus
+- [GitHub](https://github.com/TAM-DS)
+- [LinkedIn](https://www.linkedin.com/in/tracymanning)
+- [Public professional website](https://tam-ds.github.io/)
 
-- Senior and Principal AI Architecture
-- Enterprise AI
-- AI Platforms
-- Cloud / AI Architecture
-- AI Transformation Consulting
-- Technical Chief of Staff
+## Evidence interpretation
 
-## Geography
+Project descriptions were checked against repository READMEs on October 2, 2026; AI-Ready Data Platform was updated against its October 3, 2026 implementation and evidence. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
 
-Texas Triangle. In-office or hybrid. Open to meaningful travel.
+This is the public professional website at https://tam-ds.github.io/. Machine-readable metadata and llms.txt describe the selected evidence and its scope.
