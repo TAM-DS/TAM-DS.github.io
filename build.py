@@ -1,8 +1,13 @@
 """Regenerate the three-page professional evidence site for GitHub Pages."""
 from pathlib import Path
 import json
+import hashlib
 
 ROOT = Path(__file__).parent
+ASSET_VERSION = hashlib.sha256(b''.join(
+    ROOT.joinpath(name).read_bytes()
+    for name in ('styles.css', 'projects.js', 'explorer.js')
+)).hexdigest()[:12]
 ORIGIN = 'https://tam-ds.github.io'
 PUBLIC_IDENTITY = ORIGIN + '/'
 PERSON = {
@@ -36,8 +41,10 @@ def footer():
 
 def page(filename, title, desc, active, body, scripts=''):
     path = '/' if filename == 'index.html' else '/' + filename
+    for asset in ('projects.js', 'explorer.js'):
+        scripts = scripts.replace(f'src="{asset}"', f'src="{asset}?v={ASSET_VERSION}"')
     ROOT.joinpath(filename).write_text(f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101416"><meta name="robots" content="index, follow"><title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{ORIGIN}{path}"><meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{ORIGIN}{path}"><link rel="icon" type="image/svg+xml" href="{ICON_URL}"><link rel="stylesheet" href="styles.css"><script type="application/ld+json">{json.dumps(PERSON, ensure_ascii=False)}</script>{scripts}</head><body>{header(active)}{body}{footer()}</body></html>''')
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101416"><meta name="robots" content="index, follow"><title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{ORIGIN}{path}"><meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{ORIGIN}{path}"><link rel="icon" type="image/svg+xml" href="{ICON_URL}"><link rel="stylesheet" href="styles.css?v={ASSET_VERSION}"><script type="application/ld+json">{json.dumps(PERSON, ensure_ascii=False)}</script>{scripts}</head><body>{header(active)}{body}{footer()}</body></html>''')
 
 home = '''<main id="main">
 <div class="wrap hero"><div><span class="eyebrow">AI architecture · Business judgment · Governed execution</span><h1>I build AI systems that <em>earn the right to act.</em></h1><p class="intro">I work where AI capability, human authority, and business consequence meet. My focus is turning promising systems into architecture people can inspect, operate, and trust with consequential work.</p><div class="actions"><a class="button primary" href="evidence.html">Explore the evidence</a><a class="button" href="approach.html">How I approach the work</a></div><p class="location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.4"/></svg><span>Austin, Texas · Relocation within Texas · Meaningful travel</span></p></div>
