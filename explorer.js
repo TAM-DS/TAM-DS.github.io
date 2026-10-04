@@ -22,12 +22,12 @@
    const key=mode==='problem'?'problems':'capabilities';
    const shown=projects.filter(p=>selected==='all'||p[key].includes(selected));
    count.textContent=`${shown.length} of ${projects.length} selected systems`;
-   grid.innerHTML=shown.length?shown.map(p=>`<article class="project-card"><div class="card-top"><span>${String(projects.indexOf(p)+1).padStart(2,'0')}</span><span>${escape(p.status)}</span></div><h2>${escape(p.name)}</h2><p class="summary">${escape(p.summary)}</p><p class="card-proof">${escape(p.proof)}</p><p class="card-scope">${escape(p.scope)}</p><button class="card-button" data-project="${escape(p.id)}" aria-haspopup="dialog" aria-label="Read the ${escape(p.name)} evidence brief">Read evidence brief ${icon}</button></article>`).join(''):'<p class="empty">No projects match this selection. Choose All evidence to reset.</p>';
+   grid.innerHTML=shown.length?shown.map(p=>`<article class="project-card"><div class="card-top"><span>${String(projects.indexOf(p)+1).padStart(2,'0')}</span><span>${escape(p.status)}</span></div><h2>${escape(p.name)}</h2><p class="project-sector">${escape(p.sector)}</p><p class="summary">${escape(p.summary)}</p><p class="card-proof">${escape(p.proof)}</p><p class="card-scope">${escape(p.scope)}</p><button class="card-button" data-project="${escape(p.id)}" aria-haspopup="dialog" aria-label="Read the ${escape(p.name)} evidence brief">Read evidence brief ${icon}</button></article>`).join(''):'<p class="empty">No projects match this selection. Choose All evidence to reset.</p>';
    if(sync){const url=new URL(location.href);url.search='';if(mode!=='problem')url.searchParams.set('view',mode);if(selected!=='all')url.searchParams.set('filter',selected);history.replaceState(null,'',url.pathname+url.search+url.hash);}
  }
  function open(id,updateHash=true){
    const p=projects.find(x=>x.id===id);if(!p)return;
-   content.innerHTML=`<div class="dialog-header"><div><span class="eyebrow">${escape(p.category)}</span><h2 id="dialog-title">${escape(p.name)}</h2></div><button type="button" class="close" aria-label="Close evidence brief" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="dialog-body"><p class="detail-hook">${escape(p.summary)}</p><dl class="brief">${p.brief.map(([label,text])=>`<div class="brief-row"><dt>${escape(label)}</dt><dd>${escape(text)}</dd></div>`).join('')}</dl><div class="scope-box"><strong>Scope of the evidence.</strong> ${escape(p.limit)}</div><p class="stack">${escape(p.stack)}</p><div class="dialog-actions">${external(p.repo,'Open repository','button primary')}${external(p.evidence,p.evidenceLabel)}</div></div>`;
+   content.innerHTML=`<div class="dialog-header"><div><span class="eyebrow">${escape(p.category)}</span><h2 id="dialog-title">${escape(p.name)}</h2><p class="project-sector">${escape(p.sector)}</p></div><button type="button" class="close" aria-label="Close evidence brief" autofocus><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="dialog-body"><p class="detail-hook">${escape(p.summary)}</p><dl class="brief">${p.brief.map(([label,text])=>`<div class="brief-row"><dt>${escape(label)}</dt><dd>${escape(text)}</dd></div>`).join('')}</dl><div class="scope-box"><strong>Scope of the evidence.</strong> ${escape(p.limit)}</div><p class="stack">${escape(p.stack)}</p><div class="dialog-actions">${external(p.repo,'Open repository','button primary')}${external(p.evidence,p.evidenceLabel)}</div></div>`;
    content.querySelector('.close').addEventListener('click',()=>dialog.close());
    if(!dialog.open)dialog.showModal();
    dialog.scrollTop=0;
@@ -42,3 +42,4 @@
  render(false);
  if(location.hash)open(location.hash.slice(1),false);
 })();
+
