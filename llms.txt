@@ -8,7 +8,7 @@
 - Current practice: Founder & AI Architect, Apex AI|ML Engineering LLC.
 - Focus: AI architecture, Cloud / AI architecture, enterprise AI platforms, and AI transformation consulting.
 - Technical foundation: Python, AWS, GCP, SQL, Terraform, IAM, GitHub OIDC, Docker, CI/CD, and governed agentic systems.
-- Location: Austin, Texas. Willing to relocate within Texas. Open to meaningful business travel; in-office or hybrid.
+- Location: Austin, Texas. Open to meaningful business travel; in-office or hybrid.
 - Email: tmanning@post.harvard.edu.
 
 ## Site pages
