@@ -14,7 +14,7 @@
 ## Site pages
 
 - [Perspective](https://tam-ds.github.io/): Professional positioning and selected evidence.
-- [Evidence explorer](https://tam-ds.github.io/evidence.html): Six starting points and three supporting systems, with explicit evidence limits.
+- [Evidence explorer](https://tam-ds.github.io/evidence.html): Eight featured projects spanning enterprise AI, capital markets, energy, supply chain, and cybersecurity assurance, with explicit evidence limits.
 - [Architecture and governance](https://tam-ds.github.io/approach.html): Decision authority, current evidence, execution controls, recovery, and availability.
 
 ## Selected engineering evidence

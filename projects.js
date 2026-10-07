@@ -326,60 +326,6 @@ window.PROJECTS = [
     "limit": "Actual stdio MCP servers over synthetic fixtures, not live market feeds. No broker or real-money path. The OMS independently rechecks fixture risk and symbol/book pairing. Human approval, authenticated identity, durable replay protection, and live model orchestration remain outside scope."
   },
   {
-    "id": "monster-desk",
-    "name": "Monster Desk",
-    "sector": "Trading Operations",
-    "category": "Visible separation of duties",
-    "status": "Paper-only console",
-    "summary": "Research can propose a trade. It cannot send one.",
-    "proof": "Rejects unbound, altered, duplicate, and halted submissions.",
-    "scope": "Human-operated Streamlit demonstration",
-    "repo": "https://github.com/TAM-DS/monster-desk",
-    "evidence": "https://github.com/TAM-DS/monster-desk#validation-and-scope",
-    "evidenceLabel": "Review behavior tests",
-    "problems": [
-      "authority",
-      "operations"
-    ],
-    "capabilities": [
-      "governance",
-      "experience",
-      "decisions"
-    ],
-    "stack": "Python · Streamlit · SHA-256 ticket binding · pytest",
-    "brief": [
-      [
-        "Pain point",
-        "An operator interface can blur the difference between research, approval, and execution."
-      ],
-      [
-        "Architecture decision",
-        "Give Research, Risk, Execution, and Surveillance distinct workflow roles; bind Risk approval to the exact ticket digest."
-      ],
-      [
-        "Trade-off",
-        "A small local console makes the authority boundary visible; its roles and history are session-scoped."
-      ],
-      [
-        "Failure / risk",
-        "An execution operator changes approved terms, resubmits a filled ticket, or acts after a halt."
-      ],
-      [
-        "Control",
-        "Require the bound digest, refuse term mutation and repeat fills, and stop subsequent desk operations after Surveillance halts."
-      ],
-      [
-        "Evidence",
-        "Focused behavior tests cover unbound and mutated tickets, digest mismatch, duplicates, price drift, and halted operations."
-      ],
-      [
-        "Business consequence",
-        "Makes separation of duties inspectable to stakeholders before connecting a consequential workflow to external execution."
-      ]
-    ],
-    "limit": "Simulated fills only; no broker or live market feed. Roles are not authenticated accounts. Desk illustrates Heavy’s philosophy and does not call its durable runtime."
-  },
-  {
     "id": "aegis-evidence",
     "name": "AEGIS Evidence",
     "sector": "Cybersecurity Assurance",
