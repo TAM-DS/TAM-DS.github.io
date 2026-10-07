@@ -64,7 +64,7 @@ window.PROJECTS = [
     "proof": "Release acceptance evidence covers AC-01 through AC-30.",
     "scope": "PostgreSQL-backed paper execution",
     "repo": "https://github.com/TAM-DS/monster-heavy",
-    "evidence": "https://github.com/TAM-DS/monster-heavy#what-happens-when-things-fail",
+    "evidence": "https://github.com/TAM-DS/monster-heavy/blob/main/docs/PHASE5_RELEASE.md",
     "evidenceLabel": "Inspect failure behavior",
     "problems": [
       "authority",
