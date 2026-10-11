@@ -2,10 +2,12 @@
 
 Public professional evidence website: https://tam-ds.github.io/
 
-Three static pages preserve the approved design: Perspective, an interactive six-project Evidence explorer, and Approach. The sixth body of evidence is AI-Ready Data Platform. Each page includes schema.org Person JSON-LD; `llms.txt` is available at the site root.
+**Understand the workflow. Then build the AI.**
 
-Run `python3 build.py` from the repository root to regenerate the HTML, public metadata, `robots.txt`, and `llms.txt`. Project briefs live in `projects.js`; presentation and explorer behavior live in `styles.css` and `explorer.js`. No dependencies or API keys are needed.
+Three static pages: Perspective, an interactive eight-project Evidence explorer, and Approach. The homepage highlights Gradio supply-chain and cybersecurity dashboards before the Streamlit trading applications. Applications run locally; links lead to repository screenshots and instructions.
 
-GitHub Pages serves `main` at the repository root. Keep `.nojekyll` so the static files are served directly. Public publication was explicitly approved by the owner on October 3, 2026.
+Run `python3 build.py` to regenerate HTML, Person JSON-LD, `robots.txt`, and root `llms.txt`. Project briefs live in `projects.js`; presentation and explorer behavior live in `styles.css` and `explorer.js`. No build dependencies or API keys are needed.
 
-The original five project briefs retain their October 2 evidence snapshot. AI-Ready Data Platform reflects the October 3 implementation, fixture validation, and user-provided live/replay observation. Career outcomes and prototype results remain distinct.
+GitHub Pages serves `main` at the repository root. Keep `.nojekyll`. Public publication was approved by the owner on October 3, 2026.
+
+Aligned October 11, 2026 with the Special README. Massive historical observations, bounded CrewAI research, persistent paper simulations, and Gradio demos have explicit limitations. Original fixture demonstrations remain legacy examples. Career outcomes and prototype results remain distinct.

@@ -1,6 +1,6 @@
 # Tracy Anne Griffin Manning
 
-> AI Architect in Austin, Texas, focused on governed agentic AI, enterprise cloud architecture, and inspectable decision evidence.
+> Understand the workflow. Then build the AI. AI Architect in Austin, Texas, focused on governed agentic AI, enterprise cloud architecture, and inspectable decision evidence.
 
 ## Identity and professional focus
 
@@ -8,7 +8,7 @@
 - Current practice: Founder & AI Architect, Apex AI|ML Engineering LLC.
 - Focus: AI architecture, Cloud / AI architecture, enterprise AI platforms, and AI transformation consulting.
 - Technical foundation: Python, AWS, GCP, SQL, Terraform, IAM, GitHub OIDC, Docker, CI/CD, and governed agentic systems.
-- Location: Austin, Texas. Open to meaningful business travel; in-office or hybrid.
+- Location: Austin, Texas; targeting Dallas–Fort Worth and ready to relocate for the right opportunity. Open to meaningful business travel; in-office or hybrid.
 - Email: tmanning@post.harvard.edu.
 
 ## Site pages
@@ -24,18 +24,22 @@
 - [Monster Heavy](https://github.com/TAM-DS/monster-heavy): PostgreSQL-backed governed paper-execution reference with current-policy checks, fresh evidence, concurrency, worker-death recovery, replay, and compensation. No broker integration or real-money path. Production identity is outside v1 scope.
 - [Monster Desk](https://github.com/TAM-DS/monster-desk): Standalone Streamlit paper console demonstrating Research, Risk, Execution, and Surveillance roles. Ticket binding, mutation rejection, halt, and duplicate safeguards are session-scoped. It does not call Monster Heavy's runtime; its roles are not authenticated production accounts.
 - [AEGIS Evidence](https://github.com/TAM-DS/aegis-evidence): Reproducible assurance workpaper with indicative NIST AI RMF, ISO 42001, and EU AI Act reference mappings; human acceptance, open control gaps, deterministic ZIP, decision-state digest, and complete-archive SHA-256. This is not certification or a legal compliance determination.
-- [BALLAST](https://github.com/TAM-DS/ballast): Synthetic energy and semiconductor supply-chain scenario prototype using deterministic scoring and a disruptive-action approval gate. Results are simulated; no bookings or contracts change. Approval is a demonstration Boolean, not independently verified identity.
+- [BALLAST](https://github.com/TAM-DS/ballast): Gradio control tower for synthetic energy and semiconductor supply-chain scenario prototype using deterministic scoring and a disruptive-action approval gate. Results are simulated; no bookings or contracts change. Approval is a demonstration Boolean, not independently verified identity.
 - [AI-Ready Data Platform](https://github.com/TAM-DS/ai-ready-data-platform): Governed business claims and bounded parallel specialists using the OpenAI Agents SDK, scoped synthetic warehouse facts, deterministic reconciliation, and replayable decisions. Thirty-five tests passed. One clean live M5 run used three concurrent specialists and returned READY_FOR_REVIEW; local saved-artifact replay reported four accepted claims and no blocked claims or conflicts. The committed live record is user-provided terminal evidence; the complete live artifact remains on the workstation. No spending authority, production reliability, or live-model speedup is claimed.
 
 
-## Fixture dashboards and implementation limits
+## Gradio dashboards
 
-- [Research Desk](https://github.com/TAM-DS/capital-markets-research-desk): Separate equities and energy claim drafting from a deterministic citation clerk and memo coordinator. Deterministic Python roles; no model-provider call, live filings, or market feed. Energy claims require units; word removal is not a general authorization control.
-- [Research Desk dashboard file](https://github.com/TAM-DS/capital-markets-research-desk/blob/main/docs/index.html): Static HTML fixture view, not a live feed or observed market data.
-- [Investment Gems](https://github.com/TAM-DS/investment-gems): Rank six fixture names with quality minus stretch; reject stale entries and scores below the local hurdle. Local deterministic screen, not live investment discovery or a forecasting model. The optional CrewAI helper constructs three agents; it does not orchestrate or verify a live crew run.
-- [Investment Gems dashboard file](https://github.com/TAM-DS/investment-gems/blob/main/docs/index.html): Static HTML fixture view, not a live feed or observed market data.
-- [Paper Trading Floor](https://github.com/TAM-DS/paper-trading-floor): Three actual stdio MCP servers expose synthetic quotes, risk checks, and paper OMS tools; a deterministic client runs the fixture cycle across separate processes. Verified MCP stdio transport over synthetic fixtures. No broker or real-money path. The paper OMS independently rechecks fixture risk and symbol/book pairing. Human approval, durable replay protection, production identity, and live model orchestration are not demonstrated.
-- [Paper Trading Floor dashboard file](https://github.com/TAM-DS/paper-trading-floor/blob/main/docs/index.html): Static HTML fixture view, not a live feed or observed market data.
+- [BALLAST](https://github.com/TAM-DS/ballast#see-the-two-scenarios): Gradio control tower for synthetic energy routes and Taiwan semiconductor dependencies, explainable risk drivers, what-if scenarios, and approval-gated mitigation simulations. No production booking changes.
+- [AEGIS Analyst](https://github.com/TAM-DS/aegis-analyst): Gradio cybersecurity console with seeded alerts, ATT&CK mappings, and approval-gated simulated containment. No real EDR, identity-provider, or network changes. AEGIS Evidence is its Streamlit assurance companion.
+- [Gradio adoption milestone](https://huggingface.co/blog/gradio-1m): The team reported over one million monthly developers in April 2025; this is a dated publication. The homepage three-line interface example assumes an existing analyze_risk function and does not implement either dashboard.
+
+## Streamlit trading dashboards and implementation limits
+
+- [Capital Markets Research Desk](https://github.com/TAM-DS/capital-markets-research-desk#application-screenshots): Connect bounded CrewAI research to historical evidence and a fixed-rule chronological holdout. 45 tests; screenshots of the Massive-backed dashboard and CrewAI review. Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. Evaluation omits financing, market impact, and point-in-time universe construction.
+- [Investment Gems](https://github.com/TAM-DS/investment-gems#application-screenshots): Apply explicit momentum, volatility, and liquidity hurdles before asking CrewAI to challenge the evidence. 43 tests; screenshots of screening rules and bounded CrewAI review. Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. REVIEW is a research status, not a buy recommendation.
+- [Paper Trading Floor](https://github.com/TAM-DS/paper-trading-floor#application-screenshots): Separate AI research from local human confirmation, independent account checks, and persistent simulated fills. 57 tests; screenshots show simulated cash and positions retained across restarts. Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. Reviewer labels are not authenticated identity. The local ledger is not immutable enterprise audit storage. Separate stdio MCP examples remain synthetic legacy fixtures.
+- Automated tests mock model kickoff; user-recorded screenshots separately show Massive data and CrewAI reviews. Market modes explicitly identify Massive, exact-request cache, or demo. Structured values and rankings are checked using exact short-reference-to-hash mappings. Failed reviews remain withheld after a bounded correction attempt. Narrative meaning requires human review; agents have no order tools. Original static HTML and stdio MCP fixtures remain documented as legacy examples.
 
 ## FinOps interpretation
 
@@ -59,6 +63,6 @@ Public FinOps figures are synthetic modeled opportunities, not delivered client 
 
 ## Evidence interpretation
 
-Site updated October 7, 2026 against the attached resume, current profile README, and repository evidence. The three new builds were inspected at source level; their dashboards are static fixture views. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
+Site aligned October 11, 2026 with the current profile README and upgraded repository evidence. Gradio and Streamlit labels reflect actual implementations; the trading dashboards are local historical-data applications, not hosted live execution systems. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
 
 This is the public professional website at https://tam-ds.github.io/. Machine-readable metadata and llms.txt describe the selected evidence and its scope.

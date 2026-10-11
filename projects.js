@@ -165,16 +165,16 @@ window.PROJECTS = [
   },
   {
     "id": "capital-markets-research-desk",
-    "name": "Research Desk",
+    "name": "Capital Markets Research Desk",
     "sector": "Capital Markets & Energy",
-    "category": "Fixture dashboard",
-    "status": "Deterministic research fixture",
-    "summary": "A research memo must retain provenance without becoming an order.",
-    "proof": "6 behavior tests passed; dashboard is a static fixture view.",
-    "scope": "Synthetic filings and energy fixtures",
+    "category": "Streamlit research and holdout evaluation",
+    "status": "Historical market research",
+    "summary": "Connect bounded CrewAI research to historical evidence and a fixed-rule chronological holdout.",
+    "proof": "45 tests; screenshots of the Massive-backed dashboard and CrewAI review.",
+    "scope": "Historical evidence · fixed-rule evaluation",
     "repo": "https://github.com/TAM-DS/capital-markets-research-desk",
-    "evidence": "https://github.com/TAM-DS/capital-markets-research-desk/blob/main/docs/index.html",
-    "evidenceLabel": "Inspect dashboard file",
+    "evidence": "https://github.com/TAM-DS/capital-markets-research-desk#application-screenshots",
+    "evidenceLabel": "View application screenshots",
     "problems": [
       "authority",
       "auditability"
@@ -184,51 +184,51 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · local functions · synthetic corpus",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
     "brief": [
       [
         "Pain point",
-        "A research memo must retain provenance without becoming an order."
+        "A persuasive market thesis can hide weak provenance, unchecked claims, or a strategy that fails outside its development period."
       ],
       [
         "Architecture decision",
-        "Separate equities and energy claim drafting from a deterministic citation clerk and memo coordinator."
+        "Separate historical market evidence and Python metrics from CrewAI interpretation. Evaluate a fixed SMA20 long/cash rule on the final chronological holdout with benchmark and modeled costs."
       ],
       [
         "Trade-off",
-        "Small deterministic fixtures make decisions easy to inspect, while leaving live integrations and production operation outside scope."
+        "A transparent fixed rule makes evaluation inspectable; it is not an optimized strategy or proof of a profitable trading edge."
       ],
       [
         "Failure / risk",
-        "Deterministic Python roles; no model-provider call, live filings, or market feed. Energy claims require units; word removal is not a general authorization control."
+        "Invalid prices, invented values, incorrect rankings, or omitted costs can mislead a reviewer."
       ],
       [
         "Control",
-        "Bind claims to the fixture source text and date; reject unknown or untrusted sources, stale claims, missing units, or unit mismatches. Remove specified order words from the memo."
+        "Validate market rows and identify Massive/cache/demo sources. Resolve short model references to exact evidence hashes; check structured values and rankings. Withhold failed reviews after a bounded correction attempt."
       ],
       [
         "Evidence",
-        "6 tests exercise fixture provenance, trust, freshness, and unit checks. The linked HTML is a static view, not a live feed."
+        "45 automated tests with model kickoff mocked. User-recorded screenshots separately show Massive data and CrewAI research. The documented XLE holdout underperformed its benchmark after modeled costs."
       ],
       [
         "Business consequence",
-        "Makes the decision and its stopping point visible for an architecture review."
+        "Supports research with visible assumptions and contrary evidence before anyone considers execution."
       ]
     ],
-    "limit": "Deterministic Python roles; no model-provider call, live filings, or market feed. Energy claims require units; word removal is not a general authorization control."
+    "limit": "Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. Evaluation omits financing, market impact, and point-in-time universe construction."
   },
   {
     "id": "investment-gems",
     "name": "Investment Gems",
     "sector": "Equities & Energy Exposure",
-    "category": "Fixture dashboard",
-    "status": "Synthetic suggestion screen",
-    "summary": "A plausible investment story needs a visible hurdle and a reason to drop it.",
-    "proof": "4 behavior tests passed in this review; dashboard is a static fixture view.",
-    "scope": "Six-name synthetic universe",
+    "category": "Streamlit screening and research",
+    "status": "Transparent historical screen",
+    "summary": "Apply explicit momentum, volatility, and liquidity hurdles before asking CrewAI to challenge the evidence.",
+    "proof": "43 tests; screenshots of screening rules and bounded CrewAI review.",
+    "scope": "Selected equity/ETF universe · research only",
     "repo": "https://github.com/TAM-DS/investment-gems",
-    "evidence": "https://github.com/TAM-DS/investment-gems/blob/main/docs/index.html",
-    "evidenceLabel": "Inspect dashboard file",
+    "evidence": "https://github.com/TAM-DS/investment-gems#application-screenshots",
+    "evidenceLabel": "View application screenshots",
     "problems": [
       "operations",
       "auditability"
@@ -238,51 +238,51 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · local scoring · optional CrewAI agent construction",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
     "brief": [
       [
         "Pain point",
-        "A plausible investment story needs a visible hurdle and a reason to drop it."
+        "An attractive investment narrative can conceal the screening criteria and the reasons to reject it."
       ],
       [
         "Architecture decision",
-        "Rank six fixture names with quality minus stretch; reject stale entries and scores below the local hurdle."
+        "Calculate historical metrics in Python and expose configurable screening hurdles. Keep CrewAI interpretation separate from the deterministic screen."
       ],
       [
         "Trade-off",
-        "Small deterministic fixtures make decisions easy to inspect, while leaving live integrations and production operation outside scope."
+        "A small selected equity/ETF universe and visible rules support inspection; they do not provide comprehensive investment discovery or suitability assessment."
       ],
       [
         "Failure / risk",
-        "Local deterministic screen, not live investment discovery or a forecasting model. The optional CrewAI helper constructs three agents; it does not orchestrate or verify a live crew run."
+        "The model invents a metric, misranks securities, changes an evidence identifier, or treats price return as total return."
       ],
       [
         "Control",
-        "Attach invalidation text to suggestions. Keep the result suggestion-only with no order integration."
+        "Retain provenance and evidence hashes, resolve short references through an exact map, and independently validate structured values and rankings. Failed drafts remain withheld; narrative meaning requires human review."
       ],
       [
         "Evidence",
-        "4 behavior tests passed in this review exercise the repository fixtures. The linked HTML is a static view, not a running backend or live feed."
+        "43 automated tests cover market validation, screening, review checks, and UI behavior with model kickoff mocked. User-recorded screenshots separately show Massive data, screening outcomes, and CrewAI review."
       ],
       [
         "Business consequence",
-        "Makes the decision and its stopping point visible for an architecture review."
+        "Makes a research shortlist and its rejection reasons explainable."
       ]
     ],
-    "limit": "Local deterministic screen, not live investment discovery or a forecasting model. The optional CrewAI helper constructs three agents; it does not orchestrate or verify a live crew run."
+    "limit": "Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. REVIEW is a research status, not a buy recommendation."
   },
   {
     "id": "paper-trading-floor",
     "name": "Paper Trading Floor",
     "sector": "Energy & Capital Markets",
-    "category": "Fixture dashboard",
-    "status": "Verified stdio MCP fixture",
-    "summary": "Three MCP servers expose fixture quotes, risk checks, and paper fills while withholding venue tools.",
-    "proof": "15 tests passed, including protocol calls to three MCP servers.",
-    "scope": "Synthetic quotes and in-memory fills",
+    "category": "Streamlit governed paper ledger",
+    "status": "Persistent local paper simulation",
+    "summary": "Separate AI research from local human confirmation, independent account checks, and persistent simulated fills.",
+    "proof": "57 tests; screenshots show simulated cash and positions retained across restarts.",
+    "scope": "SQLite paper ledger · historical-price fills",
     "repo": "https://github.com/TAM-DS/paper-trading-floor",
-    "evidence": "https://github.com/TAM-DS/paper-trading-floor/blob/main/docs/index.html",
-    "evidenceLabel": "Inspect dashboard file",
+    "evidence": "https://github.com/TAM-DS/paper-trading-floor#application-screenshots",
+    "evidenceLabel": "View application screenshots",
     "problems": [
       "authority",
       "operations"
@@ -292,90 +292,38 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · MCP SDK 1.30.0 · stdio · synthetic fixtures · in-memory paper book",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · SQLite · legacy stdio MCP fixtures",
     "brief": [
       [
         "Pain point",
-        "Separate a research intent, a risk decision, and a paper fill from any venue action."
+        "Research must not quietly become execution authority, and repeated submissions must not duplicate a simulated fill."
       ],
       [
         "Architecture decision",
-        "Run separate market-fixture, risk, and paper OMS MCP servers over stdio. A deterministic MCP client discovers and calls the exposed tools across three processes."
+        "Keep CrewAI agents without order tools. Bind a paper ticket to its terms and require explicit local confirmation before the SQLite book records a fill."
       ],
       [
         "Trade-off",
-        "Small deterministic fixtures make decisions easy to inspect, while leaving live integrations and production operation outside scope."
+        "Historical closing prices and a local ledger make simulation inspectable; they are not executable venue quotes or authenticated enterprise approval."
       ],
       [
         "Failure / risk",
-        "Actual stdio MCP servers over synthetic fixtures, not live market feeds. No broker or real-money path. The OMS independently rechecks fixture risk and symbol/book pairing. Human approval, authenticated identity, durable replay protection, and live model orchestration remain outside scope."
+        "Ticket terms change, account limits are bypassed, a duplicate is submitted, or a restart loses the book."
       ],
       [
         "Control",
-        "Deny the venue-order tool; independently recheck risk at the OMS; reject forged risk flags, invalid notionals, stale fixture quotes, and mismatched symbol/book pairs; record venue as null."
+        "Independently check the ticket digest, evidence, symbol, quantity, cash, positions, and limits. A unique ticket ID and SQLite transaction reject duplicate fills."
       ],
       [
         "Evidence",
-        "15 tests passed, including real MCP initialization, schemas, tool discovery, fixture calls, paper submission, and venue-tool rejection. Captured protocol output is linked from the repository README."
+        "57 automated tests cover market, research, dashboard, book, and retained legacy behavior with model kickoff mocked. User-recorded screenshots separately show Massive data and the persistent simulated ledger."
       ],
       [
         "Business consequence",
-        "Makes the decision and its stopping point visible for an architecture review."
+        "Makes authorization and account consequences visible while keeping research separated from real trading venues."
       ]
     ],
-    "limit": "Actual stdio MCP servers over synthetic fixtures, not live market feeds. No broker or real-money path. The OMS independently rechecks fixture risk and symbol/book pairing. Human approval, authenticated identity, durable replay protection, and live model orchestration remain outside scope."
-  },
-  {
-    "id": "aegis-evidence",
-    "name": "AEGIS Evidence",
-    "sector": "Cybersecurity Assurance",
-    "category": "Inspectable AI assurance",
-    "status": "Replayable workpaper",
-    "summary": "Governance claims become evidence you can inspect, challenge, and replay.",
-    "proof": "Deterministic evidence ZIP with an independent SHA-256 checksum.",
-    "scope": "Indicative assurance demonstration",
-    "repo": "https://github.com/TAM-DS/aegis-evidence",
-    "evidence": "https://github.com/TAM-DS/aegis-evidence#what-you-get",
-    "evidenceLabel": "Inspect the evidence pack",
-    "problems": [
-      "auditability"
-    ],
-    "capabilities": [
-      "governance",
-      "decisions"
-    ],
-    "stack": "Python · Streamlit · YAML control catalog · pytest",
-    "brief": [
-      [
-        "Pain point",
-        "A governance declaration can sound complete while important control gaps remain unresolved."
-      ],
-      [
-        "Architecture decision",
-        "Separate deterministic classification, control statuses, challenge findings, human acceptance, and the complete frozen evidence archive."
-      ],
-      [
-        "Trade-off",
-        "A bounded catalog makes one simulated SOC workflow inspectable; mappings remain indicative diligence aids."
-      ],
-      [
-        "Failure / risk",
-        "Human acceptance falsely closes a partial control, or a stable decision digest is mistaken for the checksum of the full archive."
-      ],
-      [
-        "Control",
-        "Only eligible declarations can be accepted. Partial and missing controls remain open. Hash the full ZIP separately from the decision state."
-      ],
-      [
-        "Evidence",
-        "The default fixture retains classification and deployer-monitoring gaps. Identical inputs and acceptance state produce byte-identical ZIPs."
-      ],
-      [
-        "Business consequence",
-        "Supports a defensible review conversation by preserving both accepted evidence and unresolved risk."
-      ]
-    ],
-    "limit": "A demonstration workpaper, not an audit certification or a determination of legal compliance. Declared capabilities are not independently verified enterprise controls."
+    "limit": "Historical daily prices; price returns exclude dividends. Energy equities and ETFs are proxies, not ERCOT power or Henry Hub spot feeds. Structured checks do not establish narrative correctness or investment suitability. No broker or real-money execution. Reviewer labels are not authenticated identity. The local ledger is not immutable enterprise audit storage. Separate stdio MCP examples remain synthetic legacy fixtures."
   },
   {
     "id": "ballast",
@@ -430,5 +378,57 @@ window.PROJECTS = [
       ]
     ],
     "limit": "No production bookings or contracts change. Approval is a demo Boolean, not identity-verified authorization; tenant-scoped retrieval is not production tenant-security isolation."
+  },
+  {
+    "id": "aegis-evidence",
+    "name": "AEGIS Evidence",
+    "sector": "Cybersecurity Assurance",
+    "category": "Inspectable AI assurance",
+    "status": "Replayable workpaper",
+    "summary": "Governance claims become evidence you can inspect, challenge, and replay.",
+    "proof": "Deterministic evidence ZIP with an independent SHA-256 checksum.",
+    "scope": "Indicative assurance demonstration",
+    "repo": "https://github.com/TAM-DS/aegis-evidence",
+    "evidence": "https://github.com/TAM-DS/aegis-evidence#what-you-get",
+    "evidenceLabel": "Inspect the evidence pack",
+    "problems": [
+      "auditability"
+    ],
+    "capabilities": [
+      "governance",
+      "decisions"
+    ],
+    "stack": "Python · Streamlit · YAML control catalog · pytest",
+    "brief": [
+      [
+        "Pain point",
+        "A governance declaration can sound complete while important control gaps remain unresolved."
+      ],
+      [
+        "Architecture decision",
+        "Separate deterministic classification, control statuses, challenge findings, human acceptance, and the complete frozen evidence archive."
+      ],
+      [
+        "Trade-off",
+        "A bounded catalog makes one simulated SOC workflow inspectable; mappings remain indicative diligence aids."
+      ],
+      [
+        "Failure / risk",
+        "Human acceptance falsely closes a partial control, or a stable decision digest is mistaken for the checksum of the full archive."
+      ],
+      [
+        "Control",
+        "Only eligible declarations can be accepted. Partial and missing controls remain open. Hash the full ZIP separately from the decision state."
+      ],
+      [
+        "Evidence",
+        "The default fixture retains classification and deployer-monitoring gaps. Identical inputs and acceptance state produce byte-identical ZIPs."
+      ],
+      [
+        "Business consequence",
+        "Supports a defensible review conversation by preserving both accepted evidence and unresolved risk."
+      ]
+    ],
+    "limit": "A demonstration workpaper, not an audit certification or a determination of legal compliance. Declared capabilities are not independently verified enterprise controls."
   }
 ];
