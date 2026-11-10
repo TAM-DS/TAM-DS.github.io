@@ -13,7 +13,7 @@ PUBLIC_IDENTITY = ORIGIN + '/'
 PERSON = {
     '@context': 'https://schema.org', '@type': 'Person',
     '@id': PUBLIC_IDENTITY + '#person', 'name': 'Tracy Anne Griffin Manning',
-    'alternateName': 'Tracy Manning', 'jobTitle': 'AI Architect',
+    'alternateName': 'Tracy Manning', 'jobTitle': 'AI Architect | Enterprise AI Implementation & Delivery | C-Suite Advisory | Agentic AI Architecture & Governance | Technical Pre-Sales',
     'description': 'AI Architect focused on governed agentic AI, enterprise cloud architecture, bounded authority, and inspectable evidence.',
     'url': ORIGIN + '/', 'email': 'mailto:tmanning@post.harvard.edu',
     'homeLocation': {'@type': 'Place', 'name': 'Austin, Texas, United States'},
