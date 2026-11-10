@@ -11,3 +11,6 @@
 
 
 .framework-intro{color:var(--muted);margin-bottom:28px;max-width:950px}.framework-intro .text-link{text-decoration:underline;text-underline-offset:4px}.framework-intro img{margin-top:18px;max-width:100%}.code-example{padding:24px;border:1px solid var(--line);background:var(--panel);margin-bottom:32px;min-width:0}.code-example pre{overflow-x:auto;margin:18px 0;font-size:.9375rem;color:var(--accent);line-height:1.7}.code-example .caption{font-size:.875rem;color:var(--muted)}.dashboard-pair{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:760px){.dashboard-pair{grid-template-columns:1fr}.code-example{padding:18px}}
+
+/* Three-flagship editorial homepage */
+.flagship{border-top:3px solid var(--accent);display:flex;flex-direction:column;gap:16px}.flagship .flagship-hook{font-family:Georgia,serif;font-size:1.5rem;line-height:1.27;color:var(--text)}.flagship .text-link{margin-top:auto}.flagship .label{display:block}.flagship p strong{color:var(--text)}.flagship p{color:var(--muted)}.hero .ledger{box-shadow:0 24px 80px rgba(0,0,0,.2)}@media(max-width:780px){.flagship .flagship-hook{font-size:1.3rem}}

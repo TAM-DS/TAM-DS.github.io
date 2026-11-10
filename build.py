@@ -41,6 +41,9 @@ def footer():
     return '''<footer class="footer"><div class="wrap footer-row"><span>Tracy Anne Griffin Manning · Austin, Texas</span><nav class="footer-links" aria-label="Professional links"><a href="https://github.com/TAM-DS" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a><a href="mailto:tmanning@post.harvard.edu">Email</a><a href="llms.txt">llms.txt</a></nav></div></footer>'''
 
 def page(filename, title, desc, active, body, scripts=''):
+    # Homepage is curated directly in index.html; preserve its flagship-first design.
+    if filename == 'index.html':
+        return
     path = '/' if filename == 'index.html' else '/' + filename
     for asset in ('projects.js', 'explorer.js'):
         scripts = scripts.replace(f'src="{asset}"', f'src="{asset}?v={ASSET_VERSION}"')
