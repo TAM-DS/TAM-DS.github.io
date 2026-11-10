@@ -35,7 +35,7 @@ def header(active):
     links = [('index.html', 'Perspective', 'home'), ('evidence.html', 'Evidence', 'evidence'), ('approach.html', 'Approach', 'approach')]
     nav = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == active else '') + f'>{name}</a>' for href, name, key in links)
     return f'''<a class="skip" href="#main">Skip to content</a>
-    <header class="header"><div class="wrap nav"><a class="identity" href="index.html" aria-label="Tracy Anne Griffin Manning home"><span class="mark" aria-hidden="true">T</span><span>Tracy Anne Griffin Manning<small>AI Architect</small></span></a><nav class="nav-links" aria-label="Main navigation">{nav}</nav></div></header>'''
+    <header class="header"><div class="wrap nav"><a class="identity" href="index.html" aria-label="Tracy Anne Griffin Manning home"><span class="mark" aria-hidden="true">T</span><span>Tracy Anne Griffin Manning<small>AI Architect · Enterprise AI Implementation &amp; Delivery</small></span></a><nav class="nav-links" aria-label="Main navigation">{nav}</nav></div></header>'''
 
 def footer():
     return '''<footer class="footer"><div class="wrap footer-row"><span>Tracy Anne Griffin Manning · Austin, Texas</span><nav class="footer-links" aria-label="Professional links"><a href="https://github.com/TAM-DS" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a><a href="mailto:tmanning@post.harvard.edu">Email</a><a href="llms.txt">llms.txt</a></nav></div></footer>'''
