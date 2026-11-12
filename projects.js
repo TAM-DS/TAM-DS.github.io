@@ -226,8 +226,8 @@ window.PROJECTS = [
     "summary": "Apply explicit momentum, volatility, and liquidity hurdles before asking CrewAI to challenge the evidence.",
     "proof": "43 tests; screenshots of screening rules and bounded CrewAI review.",
     "scope": "Selected equity/ETF universe · research only",
-    "repo": "https://github.com/TAM-DS/investment-gems",
-    "evidence": "https://github.com/TAM-DS/investment-gems#application-screenshots",
+    "repo": "https://github.com/TAM-DS/energy-equity-investment-gems",
+    "evidence": "https://github.com/TAM-DS/energy-equity-investment-gems#application-screenshots",
     "evidenceLabel": "View application screenshots",
     "problems": [
       "operations",
@@ -432,3 +432,4 @@ window.PROJECTS = [
     "limit": "A demonstration workpaper, not an audit certification or a determination of legal compliance. Declared capabilities are not independently verified enterprise controls."
   }
 ];
+

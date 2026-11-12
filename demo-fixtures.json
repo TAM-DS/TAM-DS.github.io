@@ -1,0 +1,624 @@
+{
+  "mode": "synthetic-precomputed",
+  "scenarios": [
+    {
+      "actions": [
+        {
+          "id": "act-read-ln-hormuz",
+          "lane": "Ras Tanura \u2192 Rotterdam (crude)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-hormuz",
+          "lane": "Ras Tanura \u2192 Rotterdam (crude)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-hormuz. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        },
+        {
+          "id": "act-read-ln-rot-hou",
+          "lane": "Rotterdam \u2192 Houston (refined products)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        }
+      ],
+      "brief": {
+        "narrative": "ten-energy: top risk is Ras Tanura \u2192 Rotterdam (crude) at 64 (high). Filter=all commodities, horizon=30d, $101,951,280 at risk on the lead lane. Disruptive mitigations stay behind an approval gate.",
+        "query": {
+          "commodity": null,
+          "horizon_days": 30,
+          "raw": "top 5 risks",
+          "region": null,
+          "top_n": 5
+        },
+        "rows": [
+          {
+            "commodity": "crude",
+            "drivers": [
+              "baseline delay 5.0d",
+              "concentration 63%",
+              "Synthetic chokepoint alert on Hormuz-adjacent liftings."
+            ],
+            "lane_id": "ln-hormuz",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-hormuz",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-hormuz",
+                "description": "Draft RFQ for an alternate origin on crude.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              }
+            ],
+            "origin_region": "Gulf",
+            "score": 63.6,
+            "severity": "high",
+            "title": "Ras Tanura \u2192 Rotterdam (crude)",
+            "usd_at_risk": 101951280.0
+          },
+          {
+            "commodity": "refined products",
+            "drivers": [
+              "baseline delay 4.0d"
+            ],
+            "lane_id": "ln-rot-hou",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-rot-hou",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              }
+            ],
+            "origin_region": "Europe",
+            "score": 31.5,
+            "severity": "low",
+            "title": "Rotterdam \u2192 Houston (refined products)",
+            "usd_at_risk": 17565840.0
+          }
+        ],
+        "scenario": {
+          "extra_delay_days": 0.0,
+          "port_closed": "",
+          "tariff_shock": 0.0,
+          "typhoon_taiwan": false
+        },
+        "tenant_id": "ten-energy",
+        "ticket_actions": [
+          {
+            "action": "Reply with current delay + next milestone",
+            "customer": "Cinder Point Desk",
+            "hours_open": 6.0,
+            "priority": 55.4,
+            "ticket_id": "tix-880",
+            "title": "Desk wants Hormuz overlay",
+            "usd_at_risk": 101951280.0
+          }
+        ]
+      },
+      "id": "ten-energy-baseline",
+      "title": "Energy delivery",
+      "variant": "Baseline"
+    },
+    {
+      "actions": [
+        {
+          "id": "act-read-ln-hormuz",
+          "lane": "Ras Tanura \u2192 Rotterdam (crude)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-hormuz",
+          "lane": "Ras Tanura \u2192 Rotterdam (crude)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-hormuz. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        },
+        {
+          "id": "act-reroute-ln-hormuz",
+          "lane": "Ras Tanura \u2192 Rotterdam (crude)",
+          "requires_approval": true,
+          "title": "Reroute active POs",
+          "with_approval": "[SIMULATED] Reroute active POs queued for act-reroute-ln-hormuz. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Reroute active POs"
+        },
+        {
+          "id": "act-read-ln-rot-hou",
+          "lane": "Rotterdam \u2192 Houston (refined products)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        }
+      ],
+      "brief": {
+        "narrative": "ten-energy: top risk is Ras Tanura \u2192 Rotterdam (crude) at 92 (critical). Filter=all commodities, horizon=30d, $147,768,480 at risk on the lead lane. Disruptive mitigations stay behind an approval gate. Scenario: port closed=Ras Tanura, +3d.",
+        "query": {
+          "commodity": null,
+          "horizon_days": 30,
+          "raw": "top 5 risks",
+          "region": null,
+          "top_n": 5
+        },
+        "rows": [
+          {
+            "commodity": "crude",
+            "drivers": [
+              "baseline delay 5.0d",
+              "concentration 63%",
+              "Synthetic chokepoint alert on Hormuz-adjacent liftings.",
+              "+3d scenario delay"
+            ],
+            "lane_id": "ln-hormuz",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-hormuz",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-hormuz",
+                "description": "Draft RFQ for an alternate origin on crude.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              },
+              {
+                "action_id": "act-reroute-ln-hormuz",
+                "description": "Propose reroute off Ras Tanura \u2192 Rotterdam. Does not change bookings until ops confirms.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Reroute active POs"
+              }
+            ],
+            "origin_region": "Gulf",
+            "score": 92.2,
+            "severity": "critical",
+            "title": "Ras Tanura \u2192 Rotterdam (crude)",
+            "usd_at_risk": 147768480.0
+          },
+          {
+            "commodity": "refined products",
+            "drivers": [
+              "baseline delay 4.0d",
+              "+3d scenario delay"
+            ],
+            "lane_id": "ln-rot-hou",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-rot-hou",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              }
+            ],
+            "origin_region": "Europe",
+            "score": 38.1,
+            "severity": "low",
+            "title": "Rotterdam \u2192 Houston (refined products)",
+            "usd_at_risk": 21248640.0
+          }
+        ],
+        "scenario": {
+          "extra_delay_days": 3.0,
+          "port_closed": "Ras Tanura",
+          "tariff_shock": 0.0,
+          "typhoon_taiwan": false
+        },
+        "tenant_id": "ten-energy",
+        "ticket_actions": [
+          {
+            "action": "Reply with current delay + next milestone",
+            "customer": "Cinder Point Desk",
+            "hours_open": 6.0,
+            "priority": 69.7,
+            "ticket_id": "tix-880",
+            "title": "Desk wants Hormuz overlay",
+            "usd_at_risk": 147768480.0
+          }
+        ]
+      },
+      "id": "ten-energy-disruption",
+      "title": "Energy delivery",
+      "variant": "Disruption"
+    },
+    {
+      "actions": [
+        {
+          "id": "act-read-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-tpe-aus. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        },
+        {
+          "id": "act-reroute-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": true,
+          "title": "Reroute active POs",
+          "with_approval": "[SIMULATED] Reroute active POs queued for act-reroute-ln-tpe-aus. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Reroute active POs"
+        },
+        {
+          "id": "act-read-ln-tpe-phx",
+          "lane": "Kaohsiung \u2192 Phoenix (semiconductors)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-tpe-phx",
+          "lane": "Kaohsiung \u2192 Phoenix (semiconductors)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-tpe-phx. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        }
+      ],
+      "brief": {
+        "narrative": "ten-chip: top risk is Taipei \u2192 Austin (semiconductors) at 80 (critical). Filter=semiconductors, horizon=30d, $60,600,960 at risk on the lead lane. Disruptive mitigations stay behind an approval gate.",
+        "query": {
+          "commodity": "semiconductors",
+          "horizon_days": 30,
+          "raw": "top 5 risks to semiconductors from Taiwan",
+          "region": "Taiwan",
+          "top_n": 5
+        },
+        "rows": [
+          {
+            "commodity": "semiconductors",
+            "drivers": [
+              "baseline delay 6.0d",
+              "concentration 72%",
+              "single source",
+              "Synthetic typhoon track threatens Kaohsiung window in 8-14 days."
+            ],
+            "lane_id": "ln-tpe-aus",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-tpe-aus",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-tpe-aus",
+                "description": "Draft RFQ for an alternate origin on semiconductors.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              },
+              {
+                "action_id": "act-reroute-ln-tpe-aus",
+                "description": "Propose reroute off Taipei \u2192 Austin. Does not change bookings until ops confirms.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Reroute active POs"
+              }
+            ],
+            "origin_region": "Taiwan",
+            "score": 80.2,
+            "severity": "critical",
+            "title": "Taipei \u2192 Austin (semiconductors)",
+            "usd_at_risk": 60600960.0
+          },
+          {
+            "commodity": "semiconductors",
+            "drivers": [
+              "concentration 55%",
+              "single source",
+              "Synthetic typhoon track threatens Kaohsiung window in 8-14 days."
+            ],
+            "lane_id": "ln-tpe-phx",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-tpe-phx",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-tpe-phx",
+                "description": "Draft RFQ for an alternate origin on semiconductors.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              }
+            ],
+            "origin_region": "Taiwan",
+            "score": 69.4,
+            "severity": "high",
+            "title": "Kaohsiung \u2192 Phoenix (semiconductors)",
+            "usd_at_risk": 23734800.0
+          }
+        ],
+        "scenario": {
+          "extra_delay_days": 0.0,
+          "port_closed": "",
+          "tariff_shock": 0.0,
+          "typhoon_taiwan": false
+        },
+        "tenant_id": "ten-chip",
+        "ticket_actions": [
+          {
+            "action": "Escalate to control tower \u2014 lane already high risk",
+            "customer": "Austin Fab Ops",
+            "hours_open": 36.0,
+            "priority": 81.7,
+            "ticket_id": "tix-401",
+            "title": "Austin line-down risk",
+            "usd_at_risk": 60600960.0
+          },
+          {
+            "action": "Draft dual-source note (approval required to send)",
+            "customer": "Strategic Sourcing",
+            "hours_open": 12.0,
+            "priority": 27.2,
+            "ticket_id": "tix-402",
+            "title": "Need dual source on ABF",
+            "usd_at_risk": 0
+          }
+        ]
+      },
+      "id": "ten-chip-baseline",
+      "title": "Semiconductor supply",
+      "variant": "Baseline"
+    },
+    {
+      "actions": [
+        {
+          "id": "act-read-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-tpe-aus. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        },
+        {
+          "id": "act-reroute-ln-tpe-aus",
+          "lane": "Taipei \u2192 Austin (semiconductors)",
+          "requires_approval": true,
+          "title": "Reroute active POs",
+          "with_approval": "[SIMULATED] Reroute active POs queued for act-reroute-ln-tpe-aus. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Reroute active POs"
+        },
+        {
+          "id": "act-read-ln-tpe-phx",
+          "lane": "Kaohsiung \u2192 Phoenix (semiconductors)",
+          "requires_approval": false,
+          "title": "Pull dwell and insurance quotes",
+          "with_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane.",
+          "without_approval": "[READ] Pull dwell and insurance quotes \u2014 synthetic intel attached to the lane."
+        },
+        {
+          "id": "act-dual-ln-tpe-phx",
+          "lane": "Kaohsiung \u2192 Phoenix (semiconductors)",
+          "requires_approval": true,
+          "title": "Open dual-source RFQ",
+          "with_approval": "[SIMULATED] Open dual-source RFQ queued for act-dual-ln-tpe-phx. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Open dual-source RFQ"
+        },
+        {
+          "id": "act-reroute-ln-tpe-phx",
+          "lane": "Kaohsiung \u2192 Phoenix (semiconductors)",
+          "requires_approval": true,
+          "title": "Reroute active POs",
+          "with_approval": "[SIMULATED] Reroute active POs queued for act-reroute-ln-tpe-phx. Bookings and contracts unchanged until ops confirms.",
+          "without_approval": "DENIED: approval required for Reroute active POs"
+        }
+      ],
+      "brief": {
+        "narrative": "ten-chip: top risk is Taipei \u2192 Austin (semiconductors) at 99 (critical). Filter=semiconductors, horizon=30d, $74,844,000 at risk on the lead lane. Disruptive mitigations stay behind an approval gate. Scenario: typhoon overlay is on, +3d.",
+        "query": {
+          "commodity": "semiconductors",
+          "horizon_days": 30,
+          "raw": "top 5 risks to semiconductors from Taiwan",
+          "region": "Taiwan",
+          "top_n": 5
+        },
+        "rows": [
+          {
+            "commodity": "semiconductors",
+            "drivers": [
+              "baseline delay 6.0d",
+              "concentration 72%",
+              "single source",
+              "Synthetic typhoon track threatens Kaohsiung window in 8-14 days."
+            ],
+            "lane_id": "ln-tpe-aus",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-tpe-aus",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-tpe-aus",
+                "description": "Draft RFQ for an alternate origin on semiconductors.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              },
+              {
+                "action_id": "act-reroute-ln-tpe-aus",
+                "description": "Propose reroute off Taipei \u2192 Austin. Does not change bookings until ops confirms.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Reroute active POs"
+              }
+            ],
+            "origin_region": "Taiwan",
+            "score": 99.0,
+            "severity": "critical",
+            "title": "Taipei \u2192 Austin (semiconductors)",
+            "usd_at_risk": 74844000.0
+          },
+          {
+            "commodity": "semiconductors",
+            "drivers": [
+              "concentration 55%",
+              "single source",
+              "Synthetic typhoon track threatens Kaohsiung window in 8-14 days.",
+              "+3d scenario delay"
+            ],
+            "lane_id": "ln-tpe-phx",
+            "mitigations": [
+              {
+                "action_id": "act-read-ln-tpe-phx",
+                "description": "Read-only enrichment against the synthetic intel store.",
+                "disruptive": false,
+                "executed": false,
+                "requires_approval": false,
+                "result": "",
+                "title": "Pull dwell and insurance quotes"
+              },
+              {
+                "action_id": "act-dual-ln-tpe-phx",
+                "description": "Draft RFQ for an alternate origin on semiconductors.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Open dual-source RFQ"
+              },
+              {
+                "action_id": "act-reroute-ln-tpe-phx",
+                "description": "Propose reroute off Kaohsiung \u2192 Phoenix. Does not change bookings until ops confirms.",
+                "disruptive": true,
+                "executed": false,
+                "requires_approval": true,
+                "result": "",
+                "title": "Reroute active POs"
+              }
+            ],
+            "origin_region": "Taiwan",
+            "score": 96.0,
+            "severity": "critical",
+            "title": "Kaohsiung \u2192 Phoenix (semiconductors)",
+            "usd_at_risk": 32832000.0
+          }
+        ],
+        "scenario": {
+          "extra_delay_days": 3.0,
+          "port_closed": "",
+          "tariff_shock": 0.0,
+          "typhoon_taiwan": true
+        },
+        "tenant_id": "ten-chip",
+        "ticket_actions": [
+          {
+            "action": "Escalate to control tower \u2014 lane already high risk",
+            "customer": "Austin Fab Ops",
+            "hours_open": 36.0,
+            "priority": 91.1,
+            "ticket_id": "tix-401",
+            "title": "Austin line-down risk",
+            "usd_at_risk": 74844000.0
+          },
+          {
+            "action": "Draft dual-source note (approval required to send)",
+            "customer": "Strategic Sourcing",
+            "hours_open": 12.0,
+            "priority": 27.2,
+            "ticket_id": "tix-402",
+            "title": "Need dual source on ABF",
+            "usd_at_risk": 0
+          }
+        ]
+      },
+      "id": "ten-chip-disruption",
+      "title": "Semiconductor supply",
+      "variant": "Disruption"
+    }
+  ],
+  "source_files": {
+    "ballast/__init__.py": "d6544300096156e59d58c7ee3c8eb3a73bd8e74a41e9ef60ebe674bee4cee05b",
+    "ballast/engine/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/engine/nl.py": "4f7dfd1453b6db04267211cf51d8b4ab38214e848389850e9f322e42a1d60e6d",
+    "ballast/engine/risk.py": "437532a60343864be6503da4639c736b7241022b1533625b8bbda38bcd885950",
+    "ballast/engine/tickets.py": "4204a60240682107488e939c12889a9ca3a78b78adb17caddc7d5805e635041d",
+    "ballast/governance/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/governance/policy.py": "a0bf8a92615ca276b896903c51bdeb6a30286efc8619eb2bbece0d8ee8dfe749",
+    "ballast/ingest/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/ingest/seed.py": "eb2a130c2669b4f124227e60438398adce48a67af5e0e3f243a40465ad061311",
+    "ballast/memory/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/memory/store.py": "1eb28dd2c45bb9dcc6ace72813ece8ebc6caf78b180e1b957b3f0651d10abb89",
+    "ballast/runtime.py": "3ea8efe5049a6ccea30c6f39da065829c59b3a35e25ae16e0dfda8a5b7bb607f",
+    "ballast/schema/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/schema/models.py": "d289819dd91c72d749fb9cdb6f383e3fcba6405ff0001fecb164f0f33814ab6d",
+    "ballast/ui/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "ballast/ui/console.py": "6d18eb3a22f9a0ea524ddd349b53ced0f61c8a401c864f2b9c229c78665cb693"
+  }
+}
