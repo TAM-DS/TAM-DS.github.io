@@ -14,7 +14,7 @@
 ## Site pages
 
 - [Perspective](https://tam-ds.github.io/): Professional positioning and selected evidence.
-- [Evidence explorer](https://tam-ds.github.io/evidence.html): Eight featured projects spanning enterprise AI, capital markets, energy, supply chain, and cybersecurity assurance, with explicit evidence limits.
+- [Evidence explorer](https://tam-ds.github.io/evidence.html): Featured projects and supporting systems with explicit evidence limits.
 - [Architecture and governance](https://tam-ds.github.io/approach.html): Decision authority, current evidence, execution controls, recovery, and availability.
 
 ## Selected engineering evidence
@@ -44,8 +44,8 @@
 ## FinOps interpretation
 
 Public FinOps figures are synthetic modeled opportunities, not delivered client savings. Employment savings claims on the resume are separate professional-history claims and are not verified by those repositories.
-- [Assumptions](https://github.com/TAM-DS/Infrastructure_Deal_Room-FinOps-M_and_A/blob/main/docs/ASSUMPTIONS.md)
-- [Metric lineage](https://github.com/TAM-DS/Infrastructure_Deal_Room-FinOps-M_and_A/blob/main/docs/METRIC_LINEAGE.md)
+- [Assumptions](https://github.com/TAM-DS/infra-deal-room-finops/blob/main/docs/ASSUMPTIONS.md)
+- [Metric lineage](https://github.com/TAM-DS/infra-deal-room-finops/blob/main/docs/METRIC_LINEAGE.md)
 
 ## Architecture principles
 
@@ -63,6 +63,15 @@ Public FinOps figures are synthetic modeled opportunities, not delivered client 
 
 ## Evidence interpretation
 
-Site aligned October 11, 2026 with the current profile README and upgraded repository evidence. Gradio and Streamlit labels reflect actual implementations; the trading dashboards are local historical-data applications, not hosted live execution systems. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
+Site aligned November 15, 2026 with the current profile README and upgraded repository evidence. Gradio and Streamlit labels reflect actual implementations; the trading dashboards are local historical-data applications, not hosted live execution systems. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
 
 This is the public professional website at https://tam-ds.github.io/. Machine-readable metadata and llms.txt describe the selected evidence and its scope.
+
+## Current featured lineup — November 15, 2026
+
+- [FirstSync](https://github.com/TAM-DS/firstsync): Bring customer data into a B2B product through reviewed mappings, dry-runs and controlled migration. No customers. Hosted demo uses synthetic orgs and precomputed model proposals; downstream engines run server-side. Salesforce REST validation is mocked, not a live-org proof.
+- [SignalDesk](https://github.com/TAM-DS/signaldesk-acquisition-intelligence): Research companies with source-linked evidence and bounded Salesforce access. Local single-user application; delivery is simulated. No autonomous CRM writes or outreach.
+- [Agent Foundry](https://github.com/TAM-DS/agent-foundry): An agent can become more capable without quietly becoming more powerful. AWS DEV proof, not a customer-production system. TEST and PROD identities remain permissionless; approver authentication is external to v1.
+- [Databricks AI-Ready Lakehouse](https://github.com/TAM-DS/databricks-ai-ready-lakehouse): Turn raw shipment data into traceable Gold data products with explicit quality gates. Synthetic data; one documented managed job. Local interfaces read CSV exports, not a live Databricks connection. Fine-grained access enforcement was not tested.
+- [AI Infrastructure Intelligence](https://github.com/TAM-DS/ai-infra-command-tower-finops): Connect cloud spend, GPU usage and AI cost assumptions to executive decisions. Fully synthetic data. Budget variance is not realized savings; token costs are what-if inputs. No cloud remediation or purchasing actions.
+- [Agentic RAG & Voice Intelligence](https://github.com/TAM-DS/agentic-rag-voice-intelligence-platform): Connect maintained business knowledge to retrieval, conversation and voice through managed services. Architecture documentation, not a standalone custom-code application. Client outcome claims require their own measurement context; this repository does not independently establish causality.

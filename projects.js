@@ -1,5 +1,93 @@
 window.PROJECTS = [
   {
+    "id": "firstsync",
+    "name": "FirstSync",
+    "sector": "Enterprise onboarding",
+    "category": "Enterprise onboarding",
+    "status": "Hosted reference demo",
+    "summary": "Bring customer data into a B2B product through reviewed mappings, dry-runs and controlled migration.",
+    "proof": "Baseline and model evaluations; hash-bound approvals; idempotent migration and sync.",
+    "scope": "Hosted reference demo",
+    "repo": "https://github.com/TAM-DS/firstsync",
+    "evidence": "https://firstsync-demo.fly.dev",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "delivery",
+      "authority",
+      "resilience"
+    ],
+    "capabilities": [
+      "experience",
+      "governance",
+      "reliability"
+    ],
+    "stack": "Python \u00b7 Claude \u00b7 MCP \u00b7 FastAPI \u00b7 SQLite \u00b7 Fly.io",
+    "brief": [
+      [
+        "Pain point",
+        "Enterprise onboarding stalls on data mapping, access gaps and approval coordination."
+      ],
+      [
+        "Architecture decision",
+        "Let Claude inspect and propose; use deterministic validation and human approval before migration."
+      ],
+      [
+        "Control",
+        "Bind approval to proposal hashes. Repeated migrations upsert rather than duplicate records."
+      ],
+      [
+        "Evidence",
+        "Committed model evaluations compare against a name-matching baseline. The portal exposes the review-to-migration flow."
+      ],
+      [
+        "Business consequence",
+        "Make onboarding blockers visible before data moves."
+      ]
+    ],
+    "limit": "No customers. Hosted demo uses synthetic orgs and precomputed model proposals; downstream engines run server-side. Salesforce REST validation is mocked, not a live-org proof."
+  },
+  {
+    "id": "signaldesk-acquisition-intelligence",
+    "name": "SignalDesk",
+    "sector": "Commercial AI & CRM",
+    "category": "Commercial AI & CRM",
+    "status": "Developer-org proof",
+    "summary": "Research companies with source-linked evidence and bounded Salesforce access.",
+    "proof": "Documented developer-org validation: two synthetic Leads, one blocked and one requiring review.",
+    "scope": "Developer-org proof",
+    "repo": "https://github.com/TAM-DS/signaldesk-acquisition-intelligence",
+    "evidence": "https://github.com/TAM-DS/signaldesk-acquisition-intelligence#readme",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "delivery",
+      "authority"
+    ],
+    "capabilities": [
+      "experience",
+      "governance"
+    ],
+    "stack": "Python \u00b7 OpenAI \u00b7 FastAPI \u00b7 Streamlit \u00b7 Salesforce \u00b7 SQLite",
+    "brief": [
+      [
+        "Pain point",
+        "Sales research needs evidence and must respect contact restrictions."
+      ],
+      [
+        "Architecture decision",
+        "Separate research, review and outreach decisions; keep Salesforce integration GET-only."
+      ],
+      [
+        "Control",
+        "Opt-out checks, bounded live requests and human review."
+      ],
+      [
+        "Business consequence",
+        "Support reviewable lead research without granting automatic outreach authority."
+      ]
+    ],
+    "limit": "Local single-user application; delivery is simulated. No autonomous CRM writes or outreach."
+  },
+  {
     "id": "agent-foundry",
     "name": "Agent Foundry",
     "sector": "Enterprise AI",
@@ -21,7 +109,7 @@ window.PROJECTS = [
       "cloud",
       "reliability"
     ],
-    "stack": "Python 3.13 · AWS IAM / S3 · GitHub OIDC · Terraform · SQLite",
+    "stack": "Python 3.13 \u00b7 AWS IAM / S3 \u00b7 GitHub OIDC \u00b7 Terraform \u00b7 SQLite",
     "brief": [
       [
         "Pain point",
@@ -55,6 +143,131 @@ window.PROJECTS = [
     "limit": "AWS DEV proof, not a customer-production system. TEST and PROD identities remain permissionless; approver authentication is external to v1."
   },
   {
+    "id": "databricks-ai-ready-lakehouse",
+    "name": "Databricks AI-Ready Lakehouse",
+    "sector": "Data engineering",
+    "category": "Data engineering",
+    "status": "Databricks reference run",
+    "summary": "Turn raw shipment data into traceable Gold data products with explicit quality gates.",
+    "proof": "Documented serverless job: 1,260 synthetic records; 60 quarantined; Unity Catalog lineage observed.",
+    "scope": "Databricks reference run",
+    "repo": "https://github.com/TAM-DS/databricks-ai-ready-lakehouse",
+    "evidence": "https://github.com/TAM-DS/databricks-ai-ready-lakehouse#readme",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "delivery",
+      "auditability",
+      "operations"
+    ],
+    "capabilities": [
+      "cloud",
+      "reliability",
+      "decisions"
+    ],
+    "stack": "Python \u00b7 Spark SQL \u00b7 PySpark \u00b7 Delta Lake \u00b7 Unity Catalog \u00b7 Gradio \u00b7 MCP",
+    "brief": [
+      [
+        "Pain point",
+        "AI answers depend on data with known quality, meaning and lineage."
+      ],
+      [
+        "Architecture decision",
+        "Separate Bronze, Silver and Gold; quarantine invalid records with reasons."
+      ],
+      [
+        "Evidence",
+        "Successful serverless job, table-level lineage screenshots and read-only MCP smoke-test evidence."
+      ],
+      [
+        "Business consequence",
+        "Expose quality issues before downstream users rely on the data."
+      ]
+    ],
+    "limit": "Synthetic data; one documented managed job. Local interfaces read CSV exports, not a live Databricks connection. Fine-grained access enforcement was not tested."
+  },
+  {
+    "id": "ai-infra-command-tower-finops",
+    "name": "AI Infrastructure Intelligence",
+    "sector": "Infrastructure economics",
+    "category": "Infrastructure economics",
+    "status": "Modeled FinOps reference",
+    "summary": "Connect cloud spend, GPU usage and AI cost assumptions to executive decisions.",
+    "proof": "Reproducible synthetic metrics with separate historical and operational evidence windows.",
+    "scope": "Modeled FinOps reference",
+    "repo": "https://github.com/TAM-DS/ai-infra-command-tower-finops",
+    "evidence": "https://github.com/TAM-DS/ai-infra-command-tower-finops#readme",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "operations",
+      "auditability"
+    ],
+    "capabilities": [
+      "cloud",
+      "decisions"
+    ],
+    "stack": "Python \u00b7 Streamlit \u00b7 Plotly \u00b7 AWS / GCP cost models",
+    "brief": [
+      [
+        "Pain point",
+        "Leaders need to distinguish measured costs from assumptions and potential savings."
+      ],
+      [
+        "Architecture decision",
+        "Reconcile spend and isolate token-cost scenarios from historical cloud billing."
+      ],
+      [
+        "Control",
+        "Preserve metric lineage, assumptions and separate time windows."
+      ],
+      [
+        "Business consequence",
+        "Support informed infrastructure investment and optimization decisions."
+      ]
+    ],
+    "limit": "Fully synthetic data. Budget variance is not realized savings; token costs are what-if inputs. No cloud remediation or purchasing actions."
+  },
+  {
+    "id": "agentic-rag-voice-intelligence-platform",
+    "name": "Agentic RAG & Voice Intelligence",
+    "sector": "Knowledge & voice workflows",
+    "category": "Knowledge & voice workflows",
+    "status": "Low-code architecture case",
+    "summary": "Connect maintained business knowledge to retrieval, conversation and voice through managed services.",
+    "proof": "Architecture documentation for n8n, OpenAI, Supabase and ElevenLabs integration.",
+    "scope": "Low-code architecture case",
+    "repo": "https://github.com/TAM-DS/agentic-rag-voice-intelligence-platform",
+    "evidence": "https://github.com/TAM-DS/agentic-rag-voice-intelligence-platform#readme",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "delivery",
+      "operations"
+    ],
+    "capabilities": [
+      "experience",
+      "decisions"
+    ],
+    "stack": "n8n \u00b7 OpenAI \u00b7 Supabase / pgvector \u00b7 ElevenLabs \u00b7 Google Drive",
+    "brief": [
+      [
+        "Pain point",
+        "Organizational knowledge is difficult to keep current and make accessible."
+      ],
+      [
+        "Architecture decision",
+        "Compose managed services; separate knowledge ingestion, retrieval, reasoning and voice."
+      ],
+      [
+        "Trade-off",
+        "Managed services reduce custom implementation while introducing vendor and integration dependencies."
+      ],
+      [
+        "Business consequence",
+        "Help domain experts maintain knowledge in familiar tools and make it accessible conversationally."
+      ]
+    ],
+    "limit": "Architecture documentation, not a standalone custom-code application. Client outcome claims require their own measurement context; this repository does not independently establish causality."
+  },
+  {
     "id": "monster-heavy",
     "name": "Monster Heavy",
     "sector": "Capital Markets",
@@ -74,7 +287,7 @@ window.PROJECTS = [
       "governance",
       "reliability"
     ],
-    "stack": "Python · PostgreSQL · FastAPI · Docker · GitHub Actions",
+    "stack": "Python \u00b7 PostgreSQL \u00b7 FastAPI \u00b7 Docker \u00b7 GitHub Actions",
     "brief": [
       [
         "Pain point",
@@ -115,7 +328,7 @@ window.PROJECTS = [
     "status": "Live SDK path validated",
     "summary": "Parallel AI specialists contribute evidence without turning agreement into authority.",
     "proof": "35 tests passed; three live specialists; saved decisions replayed.",
-    "scope": "Synthetic warehouse · bounded collaboration",
+    "scope": "Synthetic warehouse \u00b7 bounded collaboration",
     "repo": "https://github.com/TAM-DS/ai-ready-data-platform",
     "evidence": "https://github.com/TAM-DS/ai-ready-data-platform/blob/main/docs/COLLABORATION.md#validation-scope",
     "evidenceLabel": "Inspect validation and scope",
@@ -130,7 +343,7 @@ window.PROJECTS = [
       "reliability",
       "decisions"
     ],
-    "stack": "Python · OpenAI Agents SDK · DuckDB · typed claims · deterministic controls",
+    "stack": "Python \u00b7 OpenAI Agents SDK \u00b7 DuckDB \u00b7 typed claims \u00b7 deterministic controls",
     "brief": [
       [
         "Pain point",
@@ -171,7 +384,7 @@ window.PROJECTS = [
     "status": "Historical market research",
     "summary": "Connect bounded CrewAI research to historical evidence and a fixed-rule chronological holdout.",
     "proof": "45 tests; screenshots of the Massive-backed dashboard and CrewAI review.",
-    "scope": "Historical evidence · fixed-rule evaluation",
+    "scope": "Historical evidence \u00b7 fixed-rule evaluation",
     "repo": "https://github.com/TAM-DS/capital-markets-research-desk",
     "evidence": "https://github.com/TAM-DS/capital-markets-research-desk#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -184,7 +397,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
+    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 pandas \u00b7 pytest",
     "brief": [
       [
         "Pain point",
@@ -225,7 +438,7 @@ window.PROJECTS = [
     "status": "Transparent historical screen",
     "summary": "Apply explicit momentum, volatility, and liquidity hurdles before asking CrewAI to challenge the evidence.",
     "proof": "43 tests; screenshots of screening rules and bounded CrewAI review.",
-    "scope": "Selected equity/ETF universe · research only",
+    "scope": "Selected equity/ETF universe \u00b7 research only",
     "repo": "https://github.com/TAM-DS/energy-equity-investment-gems",
     "evidence": "https://github.com/TAM-DS/energy-equity-investment-gems#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -238,7 +451,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
+    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 pandas \u00b7 pytest",
     "brief": [
       [
         "Pain point",
@@ -279,7 +492,7 @@ window.PROJECTS = [
     "status": "Persistent local paper simulation",
     "summary": "Separate AI research from local human confirmation, independent account checks, and persistent simulated fills.",
     "proof": "57 tests; screenshots show simulated cash and positions retained across restarts.",
-    "scope": "SQLite paper ledger · historical-price fills",
+    "scope": "SQLite paper ledger \u00b7 historical-price fills",
     "repo": "https://github.com/TAM-DS/paper-trading-floor",
     "evidence": "https://github.com/TAM-DS/paper-trading-floor#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -292,7 +505,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python · Streamlit · Massive REST API · CrewAI · SQLite · legacy stdio MCP fixtures",
+    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 SQLite \u00b7 legacy stdio MCP fixtures",
     "brief": [
       [
         "Pain point",
@@ -346,7 +559,7 @@ window.PROJECTS = [
       "governance",
       "experience"
     ],
-    "stack": "Python · Gradio · SQLite · deterministic risk scoring · pytest",
+    "stack": "Python \u00b7 Gradio \u00b7 SQLite \u00b7 deterministic risk scoring \u00b7 pytest",
     "brief": [
       [
         "Pain point",
@@ -398,7 +611,7 @@ window.PROJECTS = [
       "governance",
       "decisions"
     ],
-    "stack": "Python · Streamlit · YAML control catalog · pytest",
+    "stack": "Python \u00b7 Streamlit \u00b7 YAML control catalog \u00b7 pytest",
     "brief": [
       [
         "Pain point",
@@ -430,6 +643,42 @@ window.PROJECTS = [
       ]
     ],
     "limit": "A demonstration workpaper, not an audit certification or a determination of legal compliance. Declared capabilities are not independently verified enterprise controls."
+  },
+  {
+    "id": "guardrails-mcp",
+    "name": "GuardRails-MCP",
+    "sector": "Published MCP tooling",
+    "category": "Published MCP tooling",
+    "status": "Published local prototype",
+    "summary": "Compare prompt changes against labeled cases and retain release-review evidence.",
+    "proof": "PyPI v0.1.1 and an official MCP Registry record linked from the repository.",
+    "scope": "Published local prototype",
+    "repo": "https://github.com/TAM-DS/guardrails-mcp",
+    "evidence": "https://github.com/TAM-DS/guardrails-mcp#readme",
+    "evidenceLabel": "Inspect the evidence",
+    "problems": [
+      "auditability",
+      "delivery"
+    ],
+    "capabilities": [
+      "governance",
+      "reliability"
+    ],
+    "stack": "Python \u00b7 MCP \u00b7 OpenAI \u00b7 prompt regression evaluation",
+    "brief": [
+      [
+        "Pain point",
+        "Prompt changes can ship without reproducible regression evidence."
+      ],
+      [
+        "Control",
+        "Bounded runs, prompt and suite hashes, deterministic checks and separate provider-error reporting."
+      ],
+      [
+        "Business consequence",
+        "Give a human reviewer evidence for a release decision."
+      ]
+    ],
+    "limit": "Six fictional cases; local records are editable. Registry listing is not security certification. No deployment authority or automated email."
   }
 ];
-
