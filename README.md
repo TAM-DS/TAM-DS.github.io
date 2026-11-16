@@ -1,4 +1,4 @@
-# Tracy Anne Griffin Manning — AI Architect
+# Tracy Anne Griffin Manning — AI Solutions Engineering & Technical Sales | Enterprise Discovery to Deployment | Advisory & Governance | Business Value First
 
 Public portfolio: https://tam-ds.github.io/
 

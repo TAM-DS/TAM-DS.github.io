@@ -1,12 +1,12 @@
 # Tracy Anne Griffin Manning
 
-> Understand the workflow. Then build the AI. AI Architect in Austin, Texas, focused on governed agentic AI, enterprise cloud architecture, and inspectable decision evidence.
+> Understand the workflow. Then build the AI. AI solutions engineering and technical sales professional in Austin, Texas, focused on governed agentic AI, enterprise cloud architecture, and inspectable decision evidence.
 
 ## Identity and professional focus
 
 - Name: Tracy Anne Griffin Manning; professional short name: Tracy Manning.
-- Current practice: Founder & AI Architect, Apex AI|ML Engineering LLC.
-- Focus: AI architecture, Cloud / AI architecture, enterprise AI platforms, and AI transformation consulting.
+- Current practice: Founder, Apex AI|ML Engineering LLC.
+- Focus: AI Solutions Engineering & Technical Sales | Enterprise Discovery to Deployment | Advisory & Governance | Business Value First.
 - Technical foundation: Python, AWS, GCP, SQL, Terraform, IAM, GitHub OIDC, Docker, CI/CD, and governed agentic systems.
 - Location: Based in Austin; open to San Antonio, Dallas–Fort Worth, and Houston; in-office or hybrid; open to meaningful business travel.
 - Email: tmanning@post.harvard.edu.

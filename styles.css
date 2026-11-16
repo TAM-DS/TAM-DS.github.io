@@ -25,3 +25,6 @@
 
 /* GitHub-inspired blue headings and repository surfaces. */
 h1,h2,.ledger-title,.flagship .flagship-hook{color:var(--accent)}.hero{border-top:3px solid var(--accent)}.repo-directory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0}.repo-directory a{display:block;padding:16px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--accent);overflow-wrap:anywhere}.repo-directory a:hover{border-color:var(--accent)}.model-grid{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:760px){.repo-directory,.model-grid{grid-template-columns:1fr}}
+
+/* Keep the shared professional headline readable on desktop and mobile. */
+.identity{min-width:0}.identity small{max-width:660px;white-space:normal;line-height:1.5;font-size:.72rem;letter-spacing:.04em}.identity>span:last-child{min-width:0}.hero .eyebrow{line-height:1.7}
