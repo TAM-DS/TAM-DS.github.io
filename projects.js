@@ -103,12 +103,12 @@ window.PROJECTS = [
     "sector": "Commercial AI & CRM",
     "category": "Commercial AI & CRM",
     "status": "Developer-org proof",
-    "summary": "Research companies with source-linked evidence and bounded Salesforce access.",
+    "summary": "Turn OpenAI-powered company research into evidence-linked, human-reviewed decisions with bounded Salesforce access.",
     "proof": "Documented developer-org validation: two synthetic Leads, one blocked and one requiring review.",
     "scope": "Developer-org proof",
     "repo": "https://github.com/TAM-DS/signaldesk-acquisition-intelligence",
-    "evidence": "https://github.com/TAM-DS/signaldesk-acquisition-intelligence#readme",
-    "evidenceLabel": "Inspect the evidence",
+    "evidence": "https://github.com/TAM-DS/signaldesk-acquisition-intelligence/blob/main/docs/SALESFORCE_DEV_ORG_VALIDATION.md",
+    "evidenceLabel": "Review Salesforce validation",
     "problems": [
       "delivery",
       "authority"
@@ -117,26 +117,30 @@ window.PROJECTS = [
       "experience",
       "governance"
     ],
-    "stack": "Python · OpenAI · FastAPI · Streamlit · Salesforce · SQLite",
+    "stack": "Python · OpenAI Responses API · FastAPI · SQLAlchemy · SQLite · Salesforce REST · HTML/CSS/JavaScript",
     "brief": [
       [
         "Pain point",
-        "Sales research needs evidence and must respect contact restrictions."
+        "Sales teams need useful company research without treating uncertain identity, weak evidence or CRM access as permission to contact someone."
       ],
       [
         "Architecture decision",
-        "Separate research, review and outreach decisions; keep Salesforce integration GET-only."
+        "Separate company discovery, human review, lead creation and draft approval. Keep the Salesforce preview bounded and GET-only."
       ],
       [
         "Control",
-        "Opt-out checks, bounded live requests and human review."
+        "Bind approval to the exact draft; revoke it after edits or new research. Persist Do Not Contact suppression and limit live research attempts."
+      ],
+      [
+        "Evidence",
+        "Developer-org validation assessed two synthetic Leads: one blocked and one requiring review. A separately documented acquisition-to-SDR handoff remained on evidence hold when contact identity could not be verified."
       ],
       [
         "Business consequence",
-        "Support reviewable lead research without granting automatic outreach authority."
+        "Make opportunities reviewable while preserving the ability to stop when evidence or authority is missing."
       ]
     ],
-    "limit": "Local single-user application; delivery is simulated. No autonomous CRM writes or outreach."
+    "limit": "Local single-user reference application without authentication. Salesforce proof is a limited developer-operated run on synthetic Leads; automated provider tests are mocked. Citation provenance does not prove claim accuracy. Delivery is simulated; no autonomous CRM writes, production deployment or measured customer ROI."
   },
   {
     "id": "agent-foundry",
