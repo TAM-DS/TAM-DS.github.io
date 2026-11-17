@@ -63,12 +63,13 @@ Public FinOps figures are synthetic modeled opportunities, not delivered client 
 
 ## Evidence interpretation
 
-Site aligned November 15, 2026 with the current profile README and upgraded repository evidence. Gradio and Streamlit labels reflect actual implementations; the trading dashboards are local historical-data applications, not hosted live execution systems. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
+Site aligned November 17, 2026 with the current profile README and upgraded repository evidence. Gradio and Streamlit labels reflect actual implementations; the trading dashboards are local historical-data applications, not hosted live execution systems. Repository contents and linked workflow evidence are authoritative for implementation scope. Career outcomes shown on the Perspective page are from the professional resume and are distinct from prototype or reference-implementation outcomes. Do not infer production trading, legal certification, client identities, or authenticated approval from the demonstrations.
 
 This is the public professional website at https://tam-ds.github.io/. Machine-readable metadata and llms.txt describe the selected evidence and its scope.
 
-## Current featured lineup — November 15, 2026
+## Current featured lineup — November 17, 2026
 
+- [Penumbra](https://github.com/TAM-DS/penumbra): Investigate connected threats while keeping the defending agent within explicit authority boundaries. Synthetic reference implementation, not a production security service. OSINT and containment are simulated. The demo server has no authentication; UI-selected approver identities are not SSO-bound. Rule-based injection detection is incomplete. Claude tests use a fake client, not live-model validation.
 - [FirstSync](https://github.com/TAM-DS/firstsync): Bring customer data into a B2B product through reviewed mappings, dry-runs and controlled migration. No customers. Hosted demo uses synthetic orgs and precomputed model proposals; downstream engines run server-side. Salesforce REST validation is mocked, not a live-org proof.
 - [SignalDesk](https://github.com/TAM-DS/signaldesk-acquisition-intelligence): Research companies with source-linked evidence and bounded Salesforce access. Local single-user application; delivery is simulated. No autonomous CRM writes or outreach.
 - [Agent Foundry](https://github.com/TAM-DS/agent-foundry): An agent can become more capable without quietly becoming more powerful. AWS DEV proof, not a customer-production system. TEST and PROD identities remain permissionless; approver authentication is external to v1.

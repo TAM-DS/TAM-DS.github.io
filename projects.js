@@ -1,5 +1,56 @@
 window.PROJECTS = [
   {
+    "id": "penumbra",
+    "name": "Penumbra",
+    "sector": "AI security & counterintelligence",
+    "category": "Governed security investigations",
+    "status": "Synthetic reference implementation",
+    "summary": "Investigate connected threats while keeping the defending agent within explicit authority boundaries.",
+    "proof": "Red-team containment tests, evidence-linked findings and Ed25519-signed audit verification.",
+    "scope": "Synthetic telemetry · simulated containment",
+    "repo": "https://github.com/TAM-DS/penumbra",
+    "evidence": "https://github.com/TAM-DS/penumbra/blob/main/docs/THREAT_MODEL.md",
+    "evidenceLabel": "Inspect the threat model",
+    "problems": [
+      "authority",
+      "auditability",
+      "operations"
+    ],
+    "capabilities": [
+      "governance",
+      "decisions",
+      "experience"
+    ],
+    "stack": "Python · FastAPI · Claude (optional) · Ed25519 · OPA adapter",
+    "brief": [
+      [
+        "Pain point",
+        "Security agents read hostile content while operating near powerful containment tools. The defender can become an attack target."
+      ],
+      [
+        "Architecture decision",
+        "Separate telemetry, temporal evidence, specialist investigators, guardrails and the operator interface across five layers."
+      ],
+      [
+        "Trade-off",
+        "A deterministic, keyless scenario makes controls reproducible; live telemetry and authenticated approvers require further integration."
+      ],
+      [
+        "Control",
+        "Quarantine untrusted text, scope tools, check policy at proposal and execution, require human review, and sign the audit chain."
+      ],
+      [
+        "Evidence",
+        "Operation Low Tide uses synthetic telemetry. Red-team mode simulates a hijacked investigator attempting prohibited actions; tests exercise scope and policy denials, approval rules and audit tampering."
+      ],
+      [
+        "Business consequence",
+        "Make investigation findings and proposed containment reviewable, including the simulated impact on business operations."
+      ]
+    ],
+    "limit": "Synthetic reference implementation, not a production security service. OSINT and containment are simulated. The demo server has no authentication; UI-selected approver identities are not SSO-bound. Rule-based injection detection is incomplete. Claude tests use a fake client, not live-model validation."
+  },
+  {
     "id": "firstsync",
     "name": "FirstSync",
     "sector": "Enterprise onboarding",
@@ -21,7 +72,7 @@ window.PROJECTS = [
       "governance",
       "reliability"
     ],
-    "stack": "Python \u00b7 Claude \u00b7 MCP \u00b7 FastAPI \u00b7 SQLite \u00b7 Fly.io",
+    "stack": "Python · Claude · MCP · FastAPI · SQLite · Fly.io",
     "brief": [
       [
         "Pain point",
@@ -66,7 +117,7 @@ window.PROJECTS = [
       "experience",
       "governance"
     ],
-    "stack": "Python \u00b7 OpenAI \u00b7 FastAPI \u00b7 Streamlit \u00b7 Salesforce \u00b7 SQLite",
+    "stack": "Python · OpenAI · FastAPI · Streamlit · Salesforce · SQLite",
     "brief": [
       [
         "Pain point",
@@ -109,7 +160,7 @@ window.PROJECTS = [
       "cloud",
       "reliability"
     ],
-    "stack": "Python 3.13 \u00b7 AWS IAM / S3 \u00b7 GitHub OIDC \u00b7 Terraform \u00b7 SQLite",
+    "stack": "Python 3.13 · AWS IAM / S3 · GitHub OIDC · Terraform · SQLite",
     "brief": [
       [
         "Pain point",
@@ -164,7 +215,7 @@ window.PROJECTS = [
       "reliability",
       "decisions"
     ],
-    "stack": "Python \u00b7 Spark SQL \u00b7 PySpark \u00b7 Delta Lake \u00b7 Unity Catalog \u00b7 Gradio \u00b7 MCP",
+    "stack": "Python · Spark SQL · PySpark · Delta Lake · Unity Catalog · Gradio · MCP",
     "brief": [
       [
         "Pain point",
@@ -205,7 +256,7 @@ window.PROJECTS = [
       "cloud",
       "decisions"
     ],
-    "stack": "Python \u00b7 Streamlit \u00b7 Plotly \u00b7 AWS / GCP cost models",
+    "stack": "Python · Streamlit · Plotly · AWS / GCP cost models",
     "brief": [
       [
         "Pain point",
@@ -246,7 +297,7 @@ window.PROJECTS = [
       "experience",
       "decisions"
     ],
-    "stack": "n8n \u00b7 OpenAI \u00b7 Supabase / pgvector \u00b7 ElevenLabs \u00b7 Google Drive",
+    "stack": "n8n · OpenAI · Supabase / pgvector · ElevenLabs · Google Drive",
     "brief": [
       [
         "Pain point",
@@ -287,7 +338,7 @@ window.PROJECTS = [
       "governance",
       "reliability"
     ],
-    "stack": "Python \u00b7 PostgreSQL \u00b7 FastAPI \u00b7 Docker \u00b7 GitHub Actions",
+    "stack": "Python · PostgreSQL · FastAPI · Docker · GitHub Actions",
     "brief": [
       [
         "Pain point",
@@ -328,7 +379,7 @@ window.PROJECTS = [
     "status": "Live SDK path validated",
     "summary": "Parallel AI specialists contribute evidence without turning agreement into authority.",
     "proof": "35 tests passed; three live specialists; saved decisions replayed.",
-    "scope": "Synthetic warehouse \u00b7 bounded collaboration",
+    "scope": "Synthetic warehouse · bounded collaboration",
     "repo": "https://github.com/TAM-DS/ai-ready-data-platform",
     "evidence": "https://github.com/TAM-DS/ai-ready-data-platform/blob/main/docs/COLLABORATION.md#validation-scope",
     "evidenceLabel": "Inspect validation and scope",
@@ -343,7 +394,7 @@ window.PROJECTS = [
       "reliability",
       "decisions"
     ],
-    "stack": "Python \u00b7 OpenAI Agents SDK \u00b7 DuckDB \u00b7 typed claims \u00b7 deterministic controls",
+    "stack": "Python · OpenAI Agents SDK · DuckDB · typed claims · deterministic controls",
     "brief": [
       [
         "Pain point",
@@ -384,7 +435,7 @@ window.PROJECTS = [
     "status": "Historical market research",
     "summary": "Connect bounded CrewAI research to historical evidence and a fixed-rule chronological holdout.",
     "proof": "45 tests; screenshots of the Massive-backed dashboard and CrewAI review.",
-    "scope": "Historical evidence \u00b7 fixed-rule evaluation",
+    "scope": "Historical evidence · fixed-rule evaluation",
     "repo": "https://github.com/TAM-DS/capital-markets-research-desk",
     "evidence": "https://github.com/TAM-DS/capital-markets-research-desk#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -397,7 +448,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 pandas \u00b7 pytest",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
     "brief": [
       [
         "Pain point",
@@ -438,7 +489,7 @@ window.PROJECTS = [
     "status": "Transparent historical screen",
     "summary": "Apply explicit momentum, volatility, and liquidity hurdles before asking CrewAI to challenge the evidence.",
     "proof": "43 tests; screenshots of screening rules and bounded CrewAI review.",
-    "scope": "Selected equity/ETF universe \u00b7 research only",
+    "scope": "Selected equity/ETF universe · research only",
     "repo": "https://github.com/TAM-DS/energy-equity-investment-gems",
     "evidence": "https://github.com/TAM-DS/energy-equity-investment-gems#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -451,7 +502,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 pandas \u00b7 pytest",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · pandas · pytest",
     "brief": [
       [
         "Pain point",
@@ -492,7 +543,7 @@ window.PROJECTS = [
     "status": "Persistent local paper simulation",
     "summary": "Separate AI research from local human confirmation, independent account checks, and persistent simulated fills.",
     "proof": "57 tests; screenshots show simulated cash and positions retained across restarts.",
-    "scope": "SQLite paper ledger \u00b7 historical-price fills",
+    "scope": "SQLite paper ledger · historical-price fills",
     "repo": "https://github.com/TAM-DS/paper-trading-floor",
     "evidence": "https://github.com/TAM-DS/paper-trading-floor#application-screenshots",
     "evidenceLabel": "View application screenshots",
@@ -505,7 +556,7 @@ window.PROJECTS = [
       "decisions",
       "experience"
     ],
-    "stack": "Python \u00b7 Streamlit \u00b7 Massive REST API \u00b7 CrewAI \u00b7 SQLite \u00b7 legacy stdio MCP fixtures",
+    "stack": "Python · Streamlit · Massive REST API · CrewAI · SQLite · legacy stdio MCP fixtures",
     "brief": [
       [
         "Pain point",
@@ -559,7 +610,7 @@ window.PROJECTS = [
       "governance",
       "experience"
     ],
-    "stack": "Python \u00b7 Gradio \u00b7 SQLite \u00b7 deterministic risk scoring \u00b7 pytest",
+    "stack": "Python · Gradio · SQLite · deterministic risk scoring · pytest",
     "brief": [
       [
         "Pain point",
@@ -611,7 +662,7 @@ window.PROJECTS = [
       "governance",
       "decisions"
     ],
-    "stack": "Python \u00b7 Streamlit \u00b7 YAML control catalog \u00b7 pytest",
+    "stack": "Python · Streamlit · YAML control catalog · pytest",
     "brief": [
       [
         "Pain point",
@@ -664,7 +715,7 @@ window.PROJECTS = [
       "governance",
       "reliability"
     ],
-    "stack": "Python \u00b7 MCP \u00b7 OpenAI \u00b7 prompt regression evaluation",
+    "stack": "Python · MCP · OpenAI · prompt regression evaluation",
     "brief": [
       [
         "Pain point",
