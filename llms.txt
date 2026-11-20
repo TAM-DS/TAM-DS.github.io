@@ -19,6 +19,9 @@
 
 ## Selected engineering evidence
 
+- [DeadBolt](https://github.com/TAM-DS/deadbolt): Published v0.1.0 GitHub Marketplace Action and offline Mac/Linux CLI for secret and agent-config scanning. Includes SARIF output, content-hashed proposals and a human decision ledger; never uses discovered credentials or executes remediation. Sixty automated tests and a 30-finding synthetic demo. Authority is estimated, effective access unknown, and full ledger-rewrite detection requires a separately trusted head.
+- [DeadBolt Marketplace Action](https://github.com/marketplace/actions/deadbolt-secret-agent-authority-scan): Add the scanner to a GitHub Actions workflow.
+
 - [Agent Foundry](https://github.com/TAM-DS/agent-foundry): AWS DEV governance proof, not a customer-production system, separating capability, identity, deployment, runtime grants, and tool authority. The documented live AWS DEV workflow passed 399 tests and verified artifacts through S3 read-back. TEST and PROD identities remain permissionless. Approver authentication is external to v1.
 - [AWS DEV proof](https://github.com/TAM-DS/agent-foundry/actions/runs/35525913401): Recorded workflow evidence for Agent Foundry; this is a historical verification record, not a claim about current hosted infrastructure.
 - [Monster Heavy](https://github.com/TAM-DS/monster-heavy): PostgreSQL-backed governed paper-execution reference with current-policy checks, fresh evidence, concurrency, worker-death recovery, replay, and compensation. No broker integration or real-money path. Production identity is outside v1 scope.
@@ -69,6 +72,7 @@ This is the public professional website at https://tam-ds.github.io/. Machine-re
 
 ## Current featured lineup — November 17, 2026
 
+- [DeadBolt](https://github.com/TAM-DS/deadbolt): Find leaked credentials and risky agent configurations before commit or build, with remediation kept under human control. Rule coverage is finite. Authority scores are estimates; effective access is unknown. Approver labels are not authenticated identity, and a local hash chain needs an independently retained head to detect full rewriting. Optional local-model HTTP behavior is tested with a synthetic server; actual model inference remains unverified.
 - [Penumbra](https://github.com/TAM-DS/penumbra): Investigate connected threats while keeping the defending agent within explicit authority boundaries. Synthetic reference implementation, not a production security service. OSINT and containment are simulated. The demo server has no authentication; UI-selected approver identities are not SSO-bound. Rule-based injection detection is incomplete. Claude tests use a fake client, not live-model validation.
 - [FirstSync](https://github.com/TAM-DS/firstsync): Bring customer data into a B2B product through reviewed mappings, dry-runs and controlled migration. No customers. Hosted demo uses synthetic orgs and precomputed model proposals; downstream engines run server-side. Salesforce REST validation is mocked, not a live-org proof.
 - [SignalDesk](https://github.com/TAM-DS/signaldesk-acquisition-intelligence): Turn OpenAI-powered company research into evidence-linked, human-reviewed decisions with bounded Salesforce access. Local single-user reference application without authentication. Salesforce proof is a limited developer-operated run on synthetic Leads; automated provider tests are mocked. Citation provenance does not prove claim accuracy. Delivery is simulated; no autonomous CRM writes, production deployment or measured customer ROI.

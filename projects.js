@@ -1,5 +1,59 @@
 window.PROJECTS = [
   {
+    "id": "deadbolt",
+    "name": "DeadBolt",
+    "sector": "Developer security & AI agents",
+    "category": "Secret and agent-authority scanning",
+    "status": "Published GitHub Action",
+    "summary": "Find leaked credentials and risky agent configurations before commit or build, with remediation kept under human control.",
+    "proof": "Marketplace Action v0.1.0; 60 tests; 30 findings in the synthetic demo.",
+    "scope": "Offline core · Mac/Linux CLI · Linux CI",
+    "repo": "https://github.com/TAM-DS/deadbolt",
+    "evidence": "https://github.com/marketplace/actions/deadbolt-secret-agent-authority-scan",
+    "evidenceLabel": "View Marketplace Action",
+    "problems": [
+      "authority",
+      "auditability",
+      "delivery"
+    ],
+    "capabilities": [
+      "governance",
+      "reliability"
+    ],
+    "stack": "Python · Git · MCP config auditing · SARIF · GitHub Actions",
+    "brief": [
+      [
+        "Pain point",
+        "Credentials and excessive agent permissions can leak through configs, deleted Git history, container layers and AI context files."
+      ],
+      [
+        "Architecture decision",
+        "Scan local artifacts offline, combine credential detection with MCP and agent checks, and estimate potential authority using deterministic rules."
+      ],
+      [
+        "Trade-off",
+        "Offline inspection keeps discovered credentials local, but cannot verify their validity or effective permissions against live services."
+      ],
+      [
+        "Failure / risk",
+        "An unreadable artifact can hide a secret; report metadata can leak one; a local approval chain can be rewritten."
+      ],
+      [
+        "Control",
+        "Report supported incomplete scans as errors, sanitize report metadata, hash remediation proposals, serialize approval writes and support a separately trusted ledger checkpoint. Never execute remediation."
+      ],
+      [
+        "Evidence",
+        "Published v0.1.0 Marketplace Action, 60 automated tests, Python 3.10–3.13 Linux CI and a synthetic demo with 30 findings. Text, JSON and SARIF outputs support local and CI review."
+      ],
+      [
+        "Business consequence",
+        "Give engineers reviewable findings before code ships while keeping credential rotation and permission changes with a human operator."
+      ]
+    ],
+    "limit": "Rule coverage is finite. Authority scores are estimates; effective access is unknown. Approver labels are not authenticated identity, and a local hash chain needs an independently retained head to detect full rewriting. Optional local-model HTTP behavior is tested with a synthetic server; actual model inference remains unverified."
+  },
+  {
     "id": "penumbra",
     "name": "Penumbra",
     "sector": "AI security & counterintelligence",
