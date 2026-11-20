@@ -8,7 +8,7 @@
 - Current practice: Founder, Apex AI|ML Engineering LLC.
 - Focus: AI Solutions Engineering & Technical Sales | Enterprise Discovery to Deployment | Advisory & Governance | Business Value First.
 - Technical foundation: Python, AWS, GCP, SQL, Terraform, IAM, GitHub OIDC, Docker, CI/CD, and governed agentic systems.
-- Location: Based in Austin; open to San Antonio, Dallas–Fort Worth, and Houston; in-office or hybrid; open to meaningful business travel.
+- Location: Based in Austin. Open to in-office or hybrid opportunities within Texas and meaningful business travel.
 - Email: tmanning@post.harvard.edu.
 
 ## Site pages
