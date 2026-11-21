@@ -19,7 +19,7 @@ PERSON = {
     'homeLocation': {'@type': 'Place', 'name': 'Austin, Texas, United States'},
     'worksFor': {'@type': 'Organization', 'name': 'Apex AI|ML Engineering LLC'},
     'alumniOf': {'@type': 'CollegeOrUniversity', 'name': 'Harvard University'},
-    'sameAs': ['https://github.com/TAM-DS', 'https://www.linkedin.com/in/tracymanning', PUBLIC_IDENTITY],
+    'sameAs': ['https://github.com/TAM-DS', 'https://www.linkedin.com/in/tracymanning', 'https://x.com/AgenticArch1', PUBLIC_IDENTITY],
     'knowsAbout': ['Agentic AI architecture', 'AI governance', 'Enterprise AI', 'AWS', 'Google Cloud', 'Python', 'Cloud architecture', 'Evidence architecture', 'Infrastructure as code', 'Human authorization', 'AI transformation'],
     'subjectOf': [{'@type': 'CreativeWork', 'name': name, 'url': 'https://github.com/TAM-DS/' + slug} for name, slug in [
         ('Agent Foundry', 'agent-foundry'), ('Monster Heavy', 'monster-heavy'),
@@ -38,7 +38,7 @@ def header(active):
     <header class="header"><div class="wrap nav"><a class="identity" href="index.html" aria-label="Tracy Anne Griffin Manning home"><span class="mark" aria-hidden="true">T</span><span>Tracy Anne Griffin Manning<small>AI Solutions Engineering &amp; Technical Sales | Enterprise Discovery to Deployment | Advisory &amp; Governance | Business Value First</small></span></a><nav class="nav-links" aria-label="Main navigation">{nav}</nav></div></header>'''
 
 def footer():
-    return '''<footer class="footer"><div class="wrap footer-row"><span>Tracy Anne Griffin Manning · Austin, Texas</span><nav class="footer-links" aria-label="Professional links"><a href="https://github.com/TAM-DS" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a><a href="mailto:tmanning@post.harvard.edu">Email</a><a href="llms.txt">llms.txt</a></nav></div></footer>'''
+    return '''<footer class="footer"><div class="wrap footer-row"><span>Tracy Anne Griffin Manning · Austin, Texas</span><nav class="footer-links" aria-label="Professional links"><a href="https://github.com/TAM-DS" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a><a href="https://www.linkedin.com/in/tracymanning" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a><a href="mailto:tmanning@post.harvard.edu">Email</a><a href="https://x.com/AgenticArch1" target="_blank" rel="noopener noreferrer">X<span class="visually-hidden"> (opens in a new tab)</span></a><a href="llms.txt">llms.txt</a></nav></div></footer>'''
 
 def page(filename, title, desc, active, body, scripts=''):
     # Preserve the curated layout through an explicit source template.
@@ -135,6 +135,7 @@ Public FinOps figures are synthetic modeled opportunities, not delivered client 
 
 - [GitHub](https://github.com/TAM-DS)
 - [LinkedIn](https://www.linkedin.com/in/tracymanning)
+- [X](https://x.com/AgenticArch1)
 - [Public professional website]({PUBLIC_IDENTITY})
 
 ## Evidence interpretation
